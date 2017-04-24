@@ -15,11 +15,11 @@
   <form>
   <div class="form-group">
       <label for="name">Name:</label>
-      <input type="name" class="form-control" id="email" placeholder="Enter name">
+      <input type="name" class="form-control" name="userName" id="email" placeholder="Enter name">
     </div>
     <div class="form-group">
       <label for="mobile number">Mobile Number:</label>
-      <input type="mobile number" class="form-control" id="mobile number" placeholder="Enter moblie number">
+      <input type="mobile number" class="form-control" name="mobileNumber" id="mobile number" placeholder="Enter moblie number">
     </div>
     <div class="form-group">
       <label for="email">Email:</label>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <script>
@@ -63,24 +64,15 @@ $(".carousel").swipe({
   </div>
 
 </div>
-<style>
-    .visible-xs-block
-    <span class="cdt-hidden-xs">
-    
-</style>
 
-<p><span style="font-size:20px;"><span style="color:#000080;"><strong>WELCOME TO THE STATE COLLEGE OF FLORIDA LIBRARY</strong></span></span></p>
+<br>
+<c:if test="${ isUserClickedSignUp=='true'}">
+<jsp:include page="register.jsp"></jsp:include>
+</c:if>
+<br>
+<c:if test="${isUserClickedLogin=='true'}">
+<jsp:include page="login.jsp"></jsp:include>
+</c:if>
 
-<p> </p>
-
-<div class="row">
-<span class="hidden-xs" "hidden-sm"> <div class="col-xs-4"><a class="thumbnail" href="http://libguides.scf.edu/writing_citing_mla_apa_citation" target="_blank" title="APA, MLA, ASA AMA Citation Style Help."><img alt="Need to Know how to cite you work?" class="img-responsive" src="https://s3.amazonaws.com/libapps/accounts/390/images/ThumbnailCiting346191.jpg" /></a></div>
-</span>
-<div class="col-xs-4"><a class="thumbnail" href="http://libguides.scf.edu/scf_ebooks_evideos" target="_blank" title="Find eBooks and eVideos in these resources."><img alt="The State College of Florida has eBook and eVideo databases." class="img-responsive" src="https://s3.amazonaws.com/libapps/accounts/390/images/Thumbnailsebooks346191.jpg" /></a></div>
-
-<div class="col-xs-4"><a class="thumbnail" href="http://libguides.scf.edu/FAQs_Frequently_Asked_Questions_Help" target="_blank" title="Most asked questions at the Library. Find help here."><img alt="Frequently Asked Questions." class="img-responsive" src="https://s3.amazonaws.com/libapps/accounts/390/images/thumbnailfaq346191.jpg" /></a></div>
-</div>
-
-<hr />
 </body>
 </html>

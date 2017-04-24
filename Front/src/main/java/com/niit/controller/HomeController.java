@@ -18,14 +18,14 @@ public String loginPage(Model model)
 {
 	model.addAttribute("isUserClickedLogin", "true");
 
-	return "login";
+	return "home";
 }
 @RequestMapping("/registerPage")
 public String registerPage(Model model)
 {
 	model.addAttribute("isUserClickedSignUp", "true");
 
-	return "register";
+	return "home";
 }
 @RequestMapping("/kitchenPage")
 public String kitchen(Model model)
