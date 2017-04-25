@@ -14,15 +14,7 @@ import org.springframework.stereotype.Component;
 public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String categoryId;
 	
-	
-	public String getCategoryId() {
-		return categoryId;
-	}
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
-	}
 	public String getCategoryName() {
 		return categoryName;
 	}
@@ -35,15 +27,8 @@ public class Category {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getPrize() {
-		return prize;
-	}
-	public void setPrize(String prize) {
-		this.prize = prize;
-	}
 	private String categoryName;
 	private String description;
-	private String prize;
 
 
 

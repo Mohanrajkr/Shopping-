@@ -42,7 +42,6 @@ public class ProductDAOTestCase {
 	@Test
 	public void createProductTestCase()
 	{
-		product.setProductId("12");
 		product.setProductName("pots");
 		product.setPrize("456");
 		product.setQuantity("8");

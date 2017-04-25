@@ -63,12 +63,12 @@ public List<Product> list() {
 		return  sessionFactory.getCurrentSession().createQuery("from Product").list();
 	}
 	@Transactional
-	public Product get(String productId) {
+	public Product get(String id) {
 		
 		//get method get the date from user table based on primary key i.e., id
 		// and set it to User class
 		//like select * from user where id = ?
-	  return 	(Product)  sessionFactory.getCurrentSession().get(Product.class, productId);
+	  return 	(Product)  sessionFactory.getCurrentSession().get(Product.class, id);
 		
 	}
 }

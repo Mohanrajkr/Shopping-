@@ -19,7 +19,7 @@ public interface ProductDAO {
 		
 		//get user details based on userID
 		
-		public Product get(String productId);
+		public Product get(String id);
 		
 		
 		

@@ -17,7 +17,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Home&Furniture <span class="caret"></span></a>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
  
         <ul class="dropdown-menu">
           <li><a href="kitchenPage">Kitchen&Dining</a></li>
@@ -30,7 +30,9 @@
             <li><a href="#">Lighting</a></li>
         </ul>
       </li>
-          
+          <li class="active"><a href="CategoryPage">NewCategory</a></li>
+          <li class="active"><a href="SupplierPage">Supplier</a></li>
+          <li class="active"><a href="ProductPage">Product</a></li>
         </ul>
       </li>
     </ul>

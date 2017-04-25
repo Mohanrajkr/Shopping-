@@ -67,12 +67,12 @@ public List<Category> list() {
 		return  sessionFactory.getCurrentSession().createQuery("from Category").list();
 	}
 	@Transactional
-	public Category get(String categoryId) {
+	public Category get(String id) {
 		
 		//get method get the date from user table based on primary key i.e., id
 		// and set it to User class
 		//like select * from user where id = ?
-	  return 	(Category)  sessionFactory.getCurrentSession().get(Category.class, categoryId);
+	  return 	(Category)  sessionFactory.getCurrentSession().get(Category.class, id);
 		
 	}
 }

@@ -12,25 +12,28 @@
 </head>
 <body>
 <div class="container">
-  <form>
+  <form action="newUser" method="post">
   <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="name" class="form-control" name="userName" id="email" placeholder="Enter name">
+  <label for="name">userId</label>
+      <input type="name" class="form-control" name="UserId" id="email" placeholder="Enter userid">
+    </div>
+      <label for="name">userName</label>
+      <input type="name" class="form-control" name="UserName" id="email" placeholder="Enter username">
     </div>
     <div class="form-group">
-      <label for="mobile number">Mobile Number:</label>
-      <input type="mobile number" class="form-control" name="mobileNumber" id="mobile number" placeholder="Enter moblie number">
+      <label for="mobile number">mobileNumber</label>
+      <input type="mobile number" class="form-control" name="MobileNumber" id="mobile number" placeholder="Enter moblie number">
     </div>
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email">
+      <label for="email">email</label>
+      <input type="email" class="form-control" name="Email" id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      <label for="pwd">password</label>
+      <input type="password" class="form-control" name="Password" id="pwd" placeholder="Enter password">
     </div>
     
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-default" name="">Submit</button>
   </form>
 </div>
 </body>

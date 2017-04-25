@@ -73,6 +73,17 @@ $(".carousel").swipe({
 <c:if test="${isUserClickedLogin=='true'}">
 <jsp:include page="login.jsp"></jsp:include>
 </c:if>
-
+<br>
+<c:if test="${ isUserClickedNewCategory=='true'}">
+<jsp:include page="Category.jsp"></jsp:include>
+</c:if>
+<br>
+<c:if test="${ isUserClickedSupplier=='true'}">
+<jsp:include page="Supplier.jsp"></jsp:include>
+</c:if>
+<br>
+<c:if test="${ isUserClickedProduct=='true'}">
+<jsp:include page="Product.jsp"></jsp:include>
+</c:if>
 </body>
 </html>

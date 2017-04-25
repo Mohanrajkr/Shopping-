@@ -41,9 +41,7 @@ public class CategoryDAOTestCase {
 	@Test
 	public void createCategoryTestCase()
 	{
-		category.setCategoryId("kitchen");
 		category.setCategoryName("pots");
-		category.setPrize("256");
 		category.setDescription("home product");
 		boolean flag =  categoryDAO.save(category);
 		System.out.println("");

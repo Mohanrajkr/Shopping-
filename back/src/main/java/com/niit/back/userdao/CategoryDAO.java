@@ -23,6 +23,6 @@ public interface CategoryDAO{
 	
 	//get user details based on userID
 	
-	public Category get(String categoryId);
+	public Category get(String id);
 	
 }

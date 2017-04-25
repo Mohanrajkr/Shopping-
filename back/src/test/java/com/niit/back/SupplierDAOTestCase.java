@@ -42,7 +42,6 @@ public class SupplierDAOTestCase {
 	@Test
 	public void createSupplierTestCase()
 	{
-		supplier.setSupplierId("11");
 		supplier.setSupplierName("mohan");
 		supplier.setMobileNumber("88066");
 	    supplier.setAddress("tirupur");
