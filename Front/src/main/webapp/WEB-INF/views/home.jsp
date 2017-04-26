@@ -36,19 +36,19 @@ $(".carousel").swipe({
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources/images/-1.jpg">
+        <img src="resources/images/1.jpg">
       </div>
       <div class="item">
-        <img src="resources/images/abt-ban.jpg">
+        <img src="resources/images/2.jpg">
       </div>
       <div class="item">
-        <img src="resources/images/download.jpg">
+        <img src="resources/images/3.jpg">
       </div>
       <div class="item">
-        <img src="resources/images/download(1).jpg">
+        <img src="resources/images/4.jpg">
       </div>
       <div class="item">
-        <img src="resources/images/images.jpg">
+        <img src="resources/images/5.jpg">
       </div>
     </div>
 
