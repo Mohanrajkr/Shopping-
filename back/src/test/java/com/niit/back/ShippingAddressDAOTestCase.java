@@ -7,20 +7,17 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.niit.back.domain.ShippingAddress;
+import com.niit.back.userdao.ShippingAddressDAO;
 
-
-import com.niit.back.domain.User;
-import com.niit.back.userdao.UserDAO;
-
-public class UserDAOTestCase {
-	
+public class ShippingAddressDAOTestCase {
 @Autowired static AnnotationConfigApplicationContext context;
 	
-	@Autowired  static UserDAO  userDAO;
+	@Autowired  static ShippingAddressDAO  shippingaddressDAO;
 	
-	@Autowired  static User user;
+	@Autowired  static ShippingAddress shippingaddress;
 	
-
+	
 	//The above objects need to initialize
 	/**
 	 * This method is going execute before calling any one of test case
@@ -34,31 +31,31 @@ public class UserDAOTestCase {
 		context.refresh();
 		
 		//get the userDAO from context
-		userDAO =  (UserDAO) context.getBean("userDAO");
-
-		user = (User)context.getBean("user");
-	}
-
-	@Test
-	public void createUserTestCase()
-	{
+		shippingaddressDAO =  (ShippingAddressDAO) context.getBean("shippingaddressDAO");
 		
+		//get the user from context
+		
+		shippingaddress = (ShippingAddress)context.getBean("shippingaddress");
+		
+	}
 	
-		user.setUserName("Ram");
-		user.setPassword("45");
-		user.setMobileNumber("8807761502");
-		user.setEmail("ram@gmail.com");
-		user.setAddress("Tirupur");
-		boolean flag =  userDAO.save(user);
+	@Test
+	public void createShippingAddressTestCase()
+	{
+		shippingaddress.setUserId("21");
+		shippingaddress.setUserName("dress");
+		shippingaddress.setEmail("raj456@gmail.com");
+		shippingaddress.setAddress("covai");
+		shippingaddress.setMobileNumber("9874563456");
+		boolean flag =  shippingaddressDAO.save(shippingaddress);
 		System.out.println(flag);
 		
-	
 
 		//error - if there is in runtime errors  -  Red mark
 		//success  - if expected and actual is same  - green mark
 		//fail  - if expected and actual is different  -  blue mark
-		assertEquals("createUserTestCase",true,flag);
+		assertEquals("createShippingAddressTestCase",true,flag);
+		
 		
 	}
-	
 }

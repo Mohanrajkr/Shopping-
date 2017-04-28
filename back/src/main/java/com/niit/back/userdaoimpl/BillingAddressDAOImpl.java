@@ -2,22 +2,21 @@ package com.niit.back.userdaoimpl;
 
 import java.util.List;
 
-import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.niit.back.domain.Category;
-import com.niit.back.userdao.CategoryDAO;
-
-public class CategoryDAOImpl implements CategoryDAO {
+import com.niit.back.domain.BillingAddress;
+import com.niit.back.userdao.BillingAddressDAO;
+@Repository("BillingAddressDAO")
+public class BillingAddressDAOImpl implements BillingAddressDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	
 	//write user defined constructor with one parameter i.e., sessionFactory
 	
-	public CategoryDAOImpl(SessionFactory sessionFactory)
+	public BillingAddressDAOImpl(SessionFactory sessionFactory)
 	{
 		this.sessionFactory = sessionFactory;
 	}
@@ -27,10 +26,10 @@ public class CategoryDAOImpl implements CategoryDAO {
 	 * else will return false
 	 */
 	@Transactional
-	public boolean save(Category category) {
+	public boolean save(BillingAddress billingaddress) {
 		try
 		{
-		sessionFactory.getCurrentSession().save(category);
+		sessionFactory.getCurrentSession().save(billingaddress);
 		}catch (Exception e) {
 			//if any excpetion comes during execute of try block, catch will excute
 			e.printStackTrace();
@@ -44,10 +43,10 @@ public class CategoryDAOImpl implements CategoryDAO {
 	 * else will return false
 	 */
 	@Transactional
-	public boolean update(Category category) {
+	public boolean update(BillingAddress billingaddress) {
 		try
 		{
-		sessionFactory.getCurrentSession().update(category);
+		sessionFactory.getCurrentSession().update(billingaddress);
 		}catch (Exception e) {
 			//if any excpetion comes during execute of try block, catch will excute
 			e.printStackTrace();
@@ -55,24 +54,20 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 		return true;
 	}
-	/**
-	 * validate method will return true if the credetails are correct
-	 * else will return false
-	 */
 	
 	@Transactional
-public List<Category> list() {
+public List<BillingAddress> list() {
 		
 		
-		return  sessionFactory.getCurrentSession().createQuery("from Category").list();
+		return  sessionFactory.getCurrentSession().createQuery("from BillingAddress").list();
 	}
 	@Transactional
-	public Category get(String categoryId) {
+	public BillingAddress get(String billingId) {
 		
 		//get method get the date from user table based on primary key i.e., id
 		// and set it to User class
 		//like select * from user where id = ?
-	  return 	(Category)  sessionFactory.getCurrentSession().get(Category.class, categoryId);
+	  return 	(BillingAddress)  sessionFactory.getCurrentSession().get(BillingAddress.class, billingId);
 		
 	}
 }

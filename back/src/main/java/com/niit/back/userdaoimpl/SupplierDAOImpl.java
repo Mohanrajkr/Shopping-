@@ -58,12 +58,12 @@ public List<Supplier> list() {
 		return  sessionFactory.getCurrentSession().createQuery("from Supplier").list();
 	}
 	@Transactional
-	public Supplier get(String id) {
+	public Supplier get(String supplierId) {
 		
 		//get method get the date from user table based on primary key i.e., id
 		// and set it to User class
 		//like select * from user where id = ?
-	  return 	(Supplier)  sessionFactory.getCurrentSession().get(Supplier.class, id);
+	  return 	(Supplier)  sessionFactory.getCurrentSession().get(Supplier.class, supplierId);
 		
 	}
 }

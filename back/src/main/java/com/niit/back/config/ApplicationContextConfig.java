@@ -17,16 +17,25 @@ import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.back.domain.BillingAddress;
 import com.niit.back.domain.Category;
+import com.niit.back.domain.Mycart;
 import com.niit.back.domain.Product;
+import com.niit.back.domain.ShippingAddress;
 import com.niit.back.domain.Supplier;
 import com.niit.back.domain.User;
+import com.niit.back.userdao.BillingAddressDAO;
 import com.niit.back.userdao.CategoryDAO;
+import com.niit.back.userdao.MycartDAO;
 import com.niit.back.userdao.ProductDAO;
+import com.niit.back.userdao.ShippingAddressDAO;
 import com.niit.back.userdao.SupplierDAO;
 import com.niit.back.userdao.UserDAO;
+import com.niit.back.userdaoimpl.BillingAddressDAOImpl;
 import com.niit.back.userdaoimpl.CategoryDAOImpl;
+import com.niit.back.userdaoimpl.MycartDAOImpl;
 import com.niit.back.userdaoimpl.ProductDAOImpl;
+import com.niit.back.userdaoimpl.ShippingAddressDAOImpl;
 import com.niit.back.userdaoimpl.SupplierDAOImpl;
 import com.niit.back.userdaoimpl.UserDAOImpl;
 
@@ -74,8 +83,9 @@ public class ApplicationContextConfig {
 		sessionBuilder.addAnnotatedClass(Supplier.class);
 		sessionBuilder.addAnnotatedClass(Product.class);
 		sessionBuilder.addAnnotatedClass(Category.class);
-
-
+		sessionBuilder.addAnnotatedClass(Mycart.class);
+		sessionBuilder.addAnnotatedClass(ShippingAddress.class);
+		sessionBuilder.addAnnotatedClass(BillingAddress.class);
 		return sessionBuilder.buildSessionFactory();
 	}
 	
@@ -108,6 +118,24 @@ public class ApplicationContextConfig {
 	@Bean(name = "supplierDAO")
 	public SupplierDAO getSupplierDAO(SessionFactory sessionFactory) {
 		return   new SupplierDAOImpl(sessionFactory);
+		
 	}
-
+	@Autowired(required = true)
+	@Bean(name = "mycartDAO")
+	public MycartDAO getMycartDAO(SessionFactory sessionFactory) {
+		return   new MycartDAOImpl(sessionFactory);
+		
+	}	
+	@Autowired(required = true)
+	@Bean(name = "shippingaddressDAO")
+	public ShippingAddressDAO getShippingAddressDAO(SessionFactory sessionFactory) {
+		return   new ShippingAddressDAOImpl(sessionFactory);
+		
+	}	
+	@Autowired(required = true)
+	@Bean(name = "billingaddressDAO")
+	public BillingAddressDAO getBillingAddressDAO(SessionFactory sessionFactory) {
+		return   new BillingAddressDAOImpl(sessionFactory);
+		
+	}	
 }

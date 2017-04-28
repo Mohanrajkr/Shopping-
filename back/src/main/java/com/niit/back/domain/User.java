@@ -15,6 +15,7 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 private String userId;
+	
 private String userName;
 public String getUserId() {
 	return userId;

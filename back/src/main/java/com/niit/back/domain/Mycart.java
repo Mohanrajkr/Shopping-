@@ -9,25 +9,23 @@ import javax.persistence.Table;
 import org.springframework.stereotype.Component;
 @Entity
 @Component
-@Table(name="product")
-public class Product {
+@Table(name="mycart")
+public class Mycart {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String productId;
+	private String cartId;
 	
-	private String productName;
-
+public String getCartId() {
+		return cartId;
+	}
+	public void setCartId(String cartId) {
+		this.cartId = cartId;
+	}
 	public String getProductId() {
 		return productId;
 	}
 	public void setProductId(String productId) {
 		this.productId = productId;
-	}
-	public String getProductName() {
-		return productName;
-	}
-	public void setProductName(String productName) {
-		this.productName = productName;
 	}
 	public String getPrize() {
 		return prize;
@@ -41,15 +39,21 @@ public class Product {
 	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
-	public String getDescription() {
-		return description;
+	public String getTotal() {
+		return total;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setTotal(String total) {
+		this.total = total;
 	}
-	private String prize;
-	private String quantity;
-	private String description;
-
-
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+private String productId;
+private String prize;
+private String quantity;
+private String total;
+private String productName;
 }

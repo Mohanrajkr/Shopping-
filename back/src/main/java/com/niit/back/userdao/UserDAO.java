@@ -14,7 +14,7 @@ public interface UserDAO {
 		// validate the credentials  -  validate
 		//WE are going to use spring security in future.
 		//we can delete this method. after using spring security.
-		public boolean validate(String id, String password);
+		/*public boolean validate(String id, String password);*/
 		
 		// get all users   - list
 		

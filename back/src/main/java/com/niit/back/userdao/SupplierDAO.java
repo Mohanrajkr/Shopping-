@@ -22,7 +22,7 @@ public interface SupplierDAO  {
 	
 	//get user details based on userID
 	
-	public Supplier get(String id);
+	public Supplier get(String supplierId);
 	
 	
 	

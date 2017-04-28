@@ -5,11 +5,12 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.back.domain.Product;
 import com.niit.back.userdao.ProductDAO;
-
+@Repository("ProductDAO")
 public class ProductDAOImpl implements ProductDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -63,12 +64,12 @@ public List<Product> list() {
 		return  sessionFactory.getCurrentSession().createQuery("from Product").list();
 	}
 	@Transactional
-	public Product get(String id) {
+	public Product get(String productId) {
 		
 		//get method get the date from user table based on primary key i.e., id
 		// and set it to User class
 		//like select * from user where id = ?
-	  return 	(Product)  sessionFactory.getCurrentSession().get(Product.class, id);
+	  return 	(Product)  sessionFactory.getCurrentSession().get(Product.class, productId);
 		
 	}
 }

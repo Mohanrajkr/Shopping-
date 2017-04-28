@@ -32,6 +32,7 @@ public String registerPage(Model model)
 
 	return "home";
 }
+
 @RequestMapping("/CategoryPage")
 public String CategoryPage(Model model)
 {
@@ -89,5 +90,19 @@ public String automationPage(Model model)
 	model.addAttribute("isUserClickedSmart Home Automation", "true");
 
 	return "automation";
+}
+@RequestMapping("/ShippingAddressPage")
+public String ShippingAddressPage(Model model)
+{
+	model.addAttribute("isUserClickedShippingAddress", "true");
+
+	return "home";
+}
+@RequestMapping("/BillingAddressPage")
+public String BillingAddressPage(Model model)
+{
+	model.addAttribute("isUserClickedBillingAddress", "true");
+
+	return "home";
 }
 }

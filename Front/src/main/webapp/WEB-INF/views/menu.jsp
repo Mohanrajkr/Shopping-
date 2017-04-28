@@ -47,6 +47,8 @@
       </div>
     </form>
     <ul class="nav navbar-nav navbar-right">
+    <li class="active"><a href="ShippingAddressPage">ShippingAddress</a></li>
+     <li class="active"><a href="BillingAddressPage">BillingAddress</a></li>
       <li><a href="registerPage"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
       <li><a href="loginPage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>

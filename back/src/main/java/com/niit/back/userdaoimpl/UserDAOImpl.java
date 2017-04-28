@@ -26,11 +26,7 @@ public class UserDAOImpl implements UserDAO {
 	{
 		this.sessionFactory = sessionFactory;
 	}
-	/**
-	 * This save method create record in the User table.
-	 * If the record is created successfully, it will return true
-	 * else will return false
-	 */
+	
 	@Transactional
 	public boolean save(User user) {
 		try
@@ -43,11 +39,7 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return true;
 	}
-	/**
-	 * This update method update record in the User table.
-	 * If the record is updated successfully, it will return true
-	 * else will return false
-	 */
+	
 	@Transactional
 	public boolean update(User user) {
 		try
@@ -60,11 +52,8 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return true;
 	}
-	/**
-	 * validate method will return true if the credetails are correct
-	 * else will return false
-	 */
-	@Transactional
+	
+	/*@Transactional
 	public boolean validate(String userId, String password) {
 		
 		
@@ -85,7 +74,7 @@ public class UserDAOImpl implements UserDAO {
 		 return true;
 	 }
 	
-	}
+	}*/
 	@Transactional
 public List<User> list() {
 		

@@ -13,8 +13,13 @@ import org.springframework.stereotype.Component;
 public class Supplier {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-
-	
+private String supplierId;
+	public String getSupplierId() {
+		return supplierId;
+	}
+	public void setSupplierId(String supplierId) {
+		this.supplierId = supplierId;
+	}
 	private String supplierName;
 	private String mobileNumber;
 	private String address;
