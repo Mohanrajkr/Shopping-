@@ -51,6 +51,13 @@ private String password;
 private String mobileNumber;
 private String address;
 private String email;
+private String zipcode;
+public String getZipcode() {
+	return zipcode;
+}
+public void setZipcode(String zipcode) {
+	this.zipcode = zipcode;
+}
 public String getEmail() {
 	return email;
 }

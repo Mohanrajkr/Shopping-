@@ -49,6 +49,7 @@ public class UserDAOTestCase {
 		user.setMobileNumber("8807761502");
 		user.setEmail("ram@gmail.com");
 		user.setAddress("Tirupur");
+		user.setZipcode("5289");
 		boolean flag =  userDAO.save(user);
 		System.out.println(flag);
 		

@@ -9,31 +9,39 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+   <script src="resources/js/validate.js"></script>
+ </head>
 <body>
 <div class="container">
-  <form action="newUser" method="post">
+  <form action="newUser" method="post" onsubmit="return validate()">
   <div class="form-group">
-  <label for="name">userId</label>
-      <input type="name" class="form-control" name="UserId" id="email" placeholder="Enter userid">
-    </div>
-      <label for="name">userName</label>
-      <input type="name" class="form-control" name="UserName" id="email" placeholder="Enter username">
+  
+        <label for="name" >userName</label>
+      <input type="text" class="form-control" name="UserName" id="username"  placeholder="Enter username">
     </div>
     <div class="form-group">
-      <label for="mobile number">mobileNumber</label>
-      <input type="mobile number" class="form-control" name="MobileNumber" id="mobile number" placeholder="Enter moblie number">
-    </div>
+     
     <div class="form-group">
       <label for="email">email</label>
       <input type="email" class="form-control" name="Email" id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
       <label for="pwd">password</label>
-      <input type="password" class="form-control" name="Password" id="pwd" placeholder="Enter password">
+      <input type="password" class="form-control" name="Password" id="password" placeholder="Enter password">
     </div>
+    <label for="mobile number">mobileNumber</label>
+    <input type="text" class="form-control" name="MobileNumber" id="mobilenumber" placeholder="Enter moblie number">
+  </div>
+  <div class="form-group">
+  <label for="address"> address</label>
+  <input type="address" class="form-control" name="Address" id="address" placeholder="Enter address">
+</div>
+<div class="form-group">
+<label for="address">zipcode</label>
+<input type="address" class="form-control" name="Zipcode" id="zipcode" placeholder="Enter zipcode">
+</div>
     
-    <button type="submit" class="btn btn-default" name="">Submit</button>
+   <button type="submit" class="btn btn-default" name="">Submit</button>
   </form>
 </div>
 </body>
