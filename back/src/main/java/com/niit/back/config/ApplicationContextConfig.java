@@ -21,6 +21,7 @@ import com.niit.back.domain.BillingAddress;
 import com.niit.back.domain.Category;
 import com.niit.back.domain.Mycart;
 import com.niit.back.domain.Product;
+import com.niit.back.domain.Role;
 import com.niit.back.domain.ShippingAddress;
 import com.niit.back.domain.Supplier;
 import com.niit.back.domain.User;
@@ -28,6 +29,7 @@ import com.niit.back.userdao.BillingAddressDAO;
 import com.niit.back.userdao.CategoryDAO;
 import com.niit.back.userdao.MycartDAO;
 import com.niit.back.userdao.ProductDAO;
+import com.niit.back.userdao.RoleDAO;
 import com.niit.back.userdao.ShippingAddressDAO;
 import com.niit.back.userdao.SupplierDAO;
 import com.niit.back.userdao.UserDAO;
@@ -35,6 +37,7 @@ import com.niit.back.userdaoimpl.BillingAddressDAOImpl;
 import com.niit.back.userdaoimpl.CategoryDAOImpl;
 import com.niit.back.userdaoimpl.MycartDAOImpl;
 import com.niit.back.userdaoimpl.ProductDAOImpl;
+import com.niit.back.userdaoimpl.RoleDAOImpl;
 import com.niit.back.userdaoimpl.ShippingAddressDAOImpl;
 import com.niit.back.userdaoimpl.SupplierDAOImpl;
 import com.niit.back.userdaoimpl.UserDAOImpl;
@@ -86,6 +89,7 @@ public class ApplicationContextConfig {
 		sessionBuilder.addAnnotatedClass(Mycart.class);
 		sessionBuilder.addAnnotatedClass(ShippingAddress.class);
 		sessionBuilder.addAnnotatedClass(BillingAddress.class);
+		sessionBuilder.addAnnotatedClass(Role.class);
 		return sessionBuilder.buildSessionFactory();
 	}
 	
@@ -136,6 +140,12 @@ public class ApplicationContextConfig {
 	@Bean(name = "billingaddressDAO")
 	public BillingAddressDAO getBillingAddressDAO(SessionFactory sessionFactory) {
 		return   new BillingAddressDAOImpl(sessionFactory);
+		
+	}	
+	@Autowired(required = true)
+	@Bean(name = "roleDAO")
+	public RoleDAO getRoleDAO(SessionFactory sessionFactory) {
+		return   new RoleDAOImpl(sessionFactory);
 		
 	}	
 }

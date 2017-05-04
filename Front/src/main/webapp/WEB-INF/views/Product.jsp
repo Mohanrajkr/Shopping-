@@ -5,26 +5,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+ <script type="text/javascript" src="resources/js/productvalidate.js"></script>
 </head>
 <body>
 <div class="container">
-  <form action="newProduct" method="post">
+  <form action="newProduct" method="post" onsubmit="return productvalidate()">
   <div class="form-group">
    
       <label for="name">productName</label>
-      <input type="name" class="form-control" name="ProductName" id="name" placeholder="Enter productName">
+      <input type="name" class="form-control" name="ProductName" id="productname" placeholder="Enter productName">
     </div>
     <div class="form-group">
       <label for="number">prize</label>
-      <input type="name" class="form-control" name="Prize" id="name" placeholder="Enter prize">
+      <input type="name" class="form-control" name="Prize" id="prize" placeholder="Enter prize">
     </div>
     <div class="form-group">
       <label for="mobile number">quantity</label>
-      <input type="mobile number" class="form-control" name="Quantity" id="name" placeholder="Enter quantity">
+      <input type="mobile number" class="form-control" name="Quantity" id="quantity" placeholder="Enter quantity">
     </div>
      <div class="form-group">
       <label for="description">description</label>
-      <input type="name" class="form-control" name="Description" id="name" placeholder="Enter description">
+      <input type="name" class="form-control" name="Description" id="description" placeholder="Enter description">
     </div>
     <button type="submit" class="btn btn-default" name="">Submit</button>
   </form>

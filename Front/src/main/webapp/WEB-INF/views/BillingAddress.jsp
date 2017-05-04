@@ -5,19 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src="resources/js/billingaddressvalidate.js"></script>
 </head>
 <body>
 <div class="container">
-  <form action="newBillingAddress" method="post">
+  <form action="newBillingAddress" method="post" onsubmit="return billingaddressvalidate()">
   <div class="form-group">
-   <label for="name">billingId</label>
-      <input type="name" class="form-control" name="BillingId" id="email" placeholder="Enter billingid">
-    </div>
+   
      <label for="name">userId</label>
-      <input type="name" class="form-control" name="UserId" id="email" placeholder="Enter userid">
+      <input type="name" class="form-control" name="UserId" id="userid" placeholder="Enter userid">
     </div>
         <label for="name">userName</label>
-      <input type="name" class="form-control" name="UserName" id="email" placeholder="Enter username">
+      <input type="name" class="form-control" name="UserName" id="username" placeholder="Enter username">
     </div>
     <div class="form-group">
       <label for="mobile number">mobileNumber</label>
@@ -29,7 +28,7 @@
     </div>
     <div class="form-group">
       <label for="address"></label>
-      <input type="address" class="form-control" name="Address" id="pwd" placeholder="Enter address">
+      <input type="address" class="form-control" name="Address" id="address" placeholder="Enter address">
     </div>
     
     <button type="submit" class="btn btn-default" name="">Submit</button>

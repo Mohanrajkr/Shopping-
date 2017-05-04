@@ -5,21 +5,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src="resources/js/suppliervalidate.js"></script>
 </head>
 <body>
 <div class="container">
-  <form action="newSupplier" method="post">
+  <form action="newSupplier" method="post" onsubmit="return suppliervalidate()">
   <div class="form-group">
          <label for="name">supplierName</label>
-      <input type="name" class="form-control" name="SupplierName" id="name" placeholder="Enter supplierName">
+      <input type="name" class="form-control" name="SupplierName" id="suppliername" placeholder="Enter supplierName">
     </div>
     <div class="form-group">
       <label for="address">address</label>
-      <input type="name" class="form-control" name="Address" id="name" placeholder="Enter address">
+      <input type="name" class="form-control" name="Address" id="address" placeholder="Enter address">
     </div>
     <div class="form-group">
       <label for="mobile number">mobileNumber</label>
-      <input type="mobile number" class="form-control" name="MobileNumber" id="name" placeholder="Enter mobileNumber">
+      <input type="mobile number" class="form-control" name="MobileNumber" id="mobilenumber" placeholder="Enter mobileNumber">
     </div>
     <button type="submit" class="btn btn-default" name="">Submit</button>
   </form>
