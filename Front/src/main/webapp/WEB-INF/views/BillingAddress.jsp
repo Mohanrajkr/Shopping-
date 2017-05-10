@@ -10,13 +10,13 @@
 <body>
 <div class="container">
   <form action="newBillingAddress" method="post" onsubmit="return billingaddressvalidate()">
-  <div class="form-group">
-   
-     <label for="name">userId</label>
+    <div class="form-group">
+      <label for="name">userId</label>
       <input type="name" class="form-control" name="UserId" id="userid" placeholder="Enter userid">
     </div>
+    <div class="form-group">
         <label for="name">userName</label>
-      <input type="name" class="form-control" name="UserName" id="username" placeholder="Enter username">
+        <input type="name" class="form-control" name="UserName" id="username" placeholder="Enter username">
     </div>
     <div class="form-group">
       <label for="mobile number">mobileNumber</label>
@@ -30,8 +30,7 @@
       <label for="address"></label>
       <input type="address" class="form-control" name="Address" id="address" placeholder="Enter address">
     </div>
-    
-    <button type="submit" class="btn btn-default" name="">Submit</button>
+      <button type="submit" class="btn btn-default" name="">Submit</button>
   </form>
 </div>
 </body>

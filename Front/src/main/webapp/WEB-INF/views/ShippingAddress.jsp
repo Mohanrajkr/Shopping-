@@ -11,10 +11,10 @@
 <div class="container">
   <form action="newShippingAddress" method="post" onsubmit="return shippingaddressvalidate()">
   <div class="form-group">
-   
-     <label for="name">userId</label>
+      <label for="name">userId</label>
       <input type="name" class="form-control" name="UserId" id="userid" placeholder="Enter userid">
     </div>
+    <div class="form-group">
         <label for="name">userName</label>
       <input type="name" class="form-control" name="UserName" id="username" placeholder="Enter username">
     </div>

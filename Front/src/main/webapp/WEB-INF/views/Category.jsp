@@ -11,7 +11,6 @@
 <div class="container">
   <form action="newCategory" method="post" onsubmit="return categoryvalidate()">
   <div class="form-group">
-   
       <label for="name">categoryName</label>
       <input type="name" class="form-control" name="CategoryName" id="categoryname" placeholder="Enter categoryName">
     </div>

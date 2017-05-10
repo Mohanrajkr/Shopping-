@@ -15,8 +15,7 @@
 <div class="container">
   <form action="newUser" method="post" onsubmit="return validate()">
   <div class="form-group">
-  
-        <label for="name" >userName</label>
+  <label for="name" >userName</label>
       <input type="text" class="form-control" name="UserName" id="username"  placeholder="Enter username">
     </div>
     <div class="form-group">
@@ -37,8 +36,8 @@
   <input type="address" class="form-control" name="Address" id="address" placeholder="Enter address">
 </div>
 <div class="form-group">
-<label for="address">zipcode</label>
-<input type="address" class="form-control" name="Zipcode" id="zipcode" placeholder="Enter zipcode">
+<label for="zipcode">zipcode</label>
+<input type="zipcode" class="form-control" name="Zipcode" id="zipcode" placeholder="Enter zipcode">
 </div>
     
    <button type="submit" class="btn btn-default" name="">Submit</button>

@@ -11,7 +11,6 @@
 <div class="container">
   <form action="newProduct" method="post" onsubmit="return productvalidate()">
   <div class="form-group">
-   
       <label for="name">productName</label>
       <input type="name" class="form-control" name="ProductName" id="productname" placeholder="Enter productName">
     </div>

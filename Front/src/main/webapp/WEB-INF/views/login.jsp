@@ -12,10 +12,10 @@
 </head>
 <body>
 <div class="container">
-  <form>
+  <form action="SignIn" method="post">
 <div class="form-group">
-      <label for="name">userName</label>
-      <input type="name" class="form-control" name="UserName"id="name" placeholder="Enter userName">
+      <label for="name">email</label>
+      <input type="email" class="form-control" name="Email"id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
