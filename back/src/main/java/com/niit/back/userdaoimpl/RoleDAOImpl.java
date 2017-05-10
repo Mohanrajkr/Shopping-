@@ -2,14 +2,14 @@ package com.niit.back.userdaoimpl;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import com.niit.back.domain.Role;
+import com.niit.back.domain.User;
 import com.niit.back.userdao.RoleDAO;
-
+@Repository("RoleDAO")
 public class RoleDAOImpl implements RoleDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -62,4 +62,16 @@ public List<Role> list() {
 		
 		return  sessionFactory.getCurrentSession().createQuery("from Role").list();
 	}
+	
+	
+	@Transactional
+	public Role get(String email) {
+		
+		//get method get the date from user table based on primary key i.e., id
+		// and set it to User class
+		//like select * from user where id = ?
+	  return 	(Role)  sessionFactory.getCurrentSession().get(Role.class, email);
+		
+	}
+
 }

@@ -52,7 +52,27 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return true;
 	}
-	
+	public boolean validate(String email, String password) {
+		
+		
+		Query query=	 sessionFactory.getCurrentSession().createQuery(" from User where email = ? and password = ?");
+		query.setString(1, email);     //actually the index will start from zero  - will get once exception.
+		query.setString(2, password);
+		//in the User table with this id and password there will one or zero records will exist
+		//i.e., uniqueResult
+		//uniqueResult method will return object if a row exist, else it will return null
+		 if(  query.uniqueResult()  == null)
+		 {
+			 //means no row exist i.e., invalid credentials
+			 return false;
+		 }
+		 else
+		 {
+			 //means row exist i.e., valid credentials
+			 return true;
+		 }
+		
+		}
 	/*@Transactional
 	public boolean validate(String userId, String password) {
 		
@@ -89,5 +109,10 @@ public List<User> list() {
 		//like select * from user where id = ?
 	  return 	(User)  sessionFactory.getCurrentSession().get(User.class, userId);
 		
+	}
+
+	public boolean Validate(String email, String password) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

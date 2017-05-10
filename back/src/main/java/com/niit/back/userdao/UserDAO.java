@@ -17,7 +17,7 @@ public interface UserDAO {
 		/*public boolean validate(String id, String password);*/
 		
 		// get all users   - list
-		
+		public boolean Validate(String email, String password);
 		public List<User>     list();
 		
 		

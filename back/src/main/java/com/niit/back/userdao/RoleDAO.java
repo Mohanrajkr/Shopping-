@@ -13,7 +13,8 @@ public  boolean save(Role role);
 	
 	// get all users   - list
 	
-	public List<Role>     list();
+	public List<Role>  list();
 	
-	
+	public Role get(String email);
+
 }

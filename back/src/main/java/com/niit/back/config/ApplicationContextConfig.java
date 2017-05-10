@@ -1,9 +1,6 @@
 package com.niit.back.config;
 
 import java.util.Properties;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.sql.DataSource;
 
 import org.hibernate.SessionFactory;
@@ -14,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.niit.back.domain.BillingAddress;
