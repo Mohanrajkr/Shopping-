@@ -43,10 +43,24 @@ public String SupplierPage(Model model)
 
 	return "home";
 }
+@RequestMapping("/viewsupplierPage")
+public String viewsupplierPage(Model model)
+{
+	model.addAttribute("isUserClickedViewSupplier", "true");
+
+	return "home";
+}
 @RequestMapping("/ProductPage")
 public String ProductPage(Model model)
 {
 	model.addAttribute("isUserClickedProduct", "true");
+
+	return "home";
+}
+@RequestMapping("/viewproductPage")
+public String viewproductPage(Model model)
+{
+	model.addAttribute("isUserClickedViewProduct", "true");
 
 	return "home";
 }
@@ -87,6 +101,14 @@ public String automationPage(Model model)
 
 	return "automation";
 }
+@RequestMapping("/viewcategoryPage")
+public String viewcategoryPage(Model model)
+{
+	model.addAttribute("isUserClickedViewCategory", "true");
+
+	return "home";
+}
+
 @RequestMapping("/ShippingAddressPage")
 public String ShippingAddressPage(Model model)
 {

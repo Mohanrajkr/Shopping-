@@ -30,9 +30,20 @@
             <li><a href="#">Lighting</a></li>
         </ul>
       </li>
-          <li class="active"><a href="CategoryPage">NewCategory</a></li>
-          <li class="active"><a href="SupplierPage">Supplier</a></li>
-          <li class="active"><a href="ProductPage">Product</a></li>
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">NewCategory <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="CategoryPage">Add Category</a></li>
+             <li><a href="viewcategoryPage">ViewCategory</a></li>
+          </ul>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Supplier <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+             <li><a href="SupplierPage">AddSupplier</a></li>
+             <li><a href="viewsupplierPage">ViewSupplier</a></li>
+          </ul>
+           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Product <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li class="active"><a href="ProductPage">AddProduct</a></li>
+          <li class="active"><a href="viewproductPage">ViewProduct</a></li>
         </ul>
       </li>
     </ul>

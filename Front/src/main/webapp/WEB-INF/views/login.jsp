@@ -12,18 +12,16 @@
 </head>
 <body>
 <div class="container">
-  <form action="SignIn" method="post">
+  <form action="signIn" method="post">
 <div class="form-group">
       <label for="name">email</label>
       <input type="email" class="form-control" name="Email"id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label for="pwd">Password:</label>
+      <label for="pwd">password</label>
       <input type="password" class="form-control" name="Password"id="pwd" placeholder="Enter password">
     </div>
-    <div class="checkbox">
-      <label><input type="checkbox"> Remember me</label>
-    </div>
+   
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>

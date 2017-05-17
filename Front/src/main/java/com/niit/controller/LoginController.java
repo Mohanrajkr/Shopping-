@@ -18,13 +18,13 @@ public class LoginController {
 	@Autowired
 	private Role role;
 
-	@RequestMapping("SignIn")
+	@RequestMapping("signIn")
 	public String showMessage(@RequestParam(value = "email") String email,
 			@RequestParam(value = "password") String password, Model model) {
 		System.out.println("in controller");
 		// String message;
 		String mess;
-		if (userDAO.Validate(email, password)) {
+		if (userDAO.validate(email, password)) {
 
 			role = roleDAO.get(email);
 			String u = "ROLE_USER";
