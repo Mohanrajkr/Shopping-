@@ -24,10 +24,7 @@ public class Role {
 	private String userName;
 	private String email;
 	private String role;
-	private String userLogin;
 	
-
-	private String adminLogin;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "userId")
@@ -74,19 +71,5 @@ public class Role {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	public String getUserLogin() {
-		return userLogin;
-	}
-
-	public void setUserLogin(String userLogin) {
-		this.userLogin = userLogin;
-	}
-
-	public String getAdminLogin() {
-		return adminLogin;
-	}
-
-	public void setAdminLogin(String adminLogin) {
-		this.adminLogin = adminLogin;
-	}
+	
 }

@@ -28,6 +28,8 @@ public class User {
 	private String zipcode;
 	private boolean enable;
 
+	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "userId")
 	private Role role;
@@ -88,7 +90,6 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	public boolean isEnable() {
 		return enable;
 	}
@@ -96,7 +97,7 @@ public class User {
 	public void setEnable(boolean enable) {
 		this.enable = enable;
 	}
-
+	
 	public Role getRole() {
 		return role;
 	}

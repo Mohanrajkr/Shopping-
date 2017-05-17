@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import com.niit.back.domain.Role;
-import com.niit.back.domain.User;
 import com.niit.back.userdao.RoleDAO;
 @Repository("RoleDAO")
 public class RoleDAOImpl implements RoleDAO {
@@ -31,23 +30,6 @@ public class RoleDAOImpl implements RoleDAO {
 		try
 		{
 		sessionFactory.getCurrentSession().save(role);
-		}catch (Exception e) {
-			//if any excpetion comes during execute of try block, catch will excute
-			e.printStackTrace();
-			return false;
-		}
-		return true;
-	}
-	/**
-	 * This update method update record in the User table.
-	 * If the record is updated successfully, it will return true
-	 * else will return false
-	 */
-	@Transactional
-	public boolean update(Role role) {
-		try
-		{
-		sessionFactory.getCurrentSession().update(role);
 		}catch (Exception e) {
 			//if any excpetion comes during execute of try block, catch will excute
 			e.printStackTrace();

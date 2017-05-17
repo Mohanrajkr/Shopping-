@@ -8,8 +8,7 @@ public interface UserDAO {
 	
 		public  boolean save(User user);
 		
-		// update the user details  - update
-		public boolean update(User user);
+		
 		
 		// validate the credentials  -  validate
 		//WE are going to use spring security in future.
@@ -17,13 +16,13 @@ public interface UserDAO {
 		/*public boolean validate(String id, String password);*/
 		
 		// get all users   - list
-		public boolean Validate(String email, String password);
+		public boolean validate(String email, String password);
 		public List<User>     list();
 		
 		
 		//get user details based on userID
 		
-		public User get(String userId);
+		public User get(String email);
 		
 		
 		
