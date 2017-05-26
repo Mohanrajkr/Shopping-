@@ -43,8 +43,8 @@ public class ProductDAOTestCase {
 	public void createProductTestCase()
 	{
 		product.setProductName("pots");
-		product.setPrize("456");
-		product.setQuantity("8");
+		product.setPrize(456);
+		product.setQuantity(8);
 		product.setDescription("home product");
 		boolean flag =  productDAO.save(product);
 		System.out.println(flag);

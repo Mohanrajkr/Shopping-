@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.back.domain.Category;
 import com.niit.back.domain.Supplier;
 import com.niit.back.userdao.SupplierDAO;
 
@@ -65,5 +66,12 @@ public List<Supplier> list() {
 		//like select * from user where id = ?
 	  return 	(Supplier)  sessionFactory.getCurrentSession().get(Supplier.class, supplierId);
 		
+	}
+	
+	@Transactional
+	public void delete(String supplierId) {
+	Supplier supplierToDelete = new Supplier();
+	supplierToDelete.setSupplierId(supplierId);
+	sessionFactory.getCurrentSession().delete(supplierToDelete);
 	}
 }

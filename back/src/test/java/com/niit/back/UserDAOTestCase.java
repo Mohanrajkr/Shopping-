@@ -1,15 +1,15 @@
 package com.niit.back;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-
-
+import com.niit.back.domain.Role;
 import com.niit.back.domain.User;
+import com.niit.back.userdao.RoleDAO;
 import com.niit.back.userdao.UserDAO;
 
 public class UserDAOTestCase {
@@ -21,6 +21,11 @@ public class UserDAOTestCase {
 	@Autowired  static User user;
 	
 
+	@Autowired
+	static RoleDAO roleDAO;
+
+	@Autowired
+	static Role role;
 	//The above objects need to initialize
 	/**
 	 * This method is going execute before calling any one of test case
@@ -37,6 +42,11 @@ public class UserDAOTestCase {
 		userDAO =  (UserDAO) context.getBean("userDAO");
 
 		user = (User)context.getBean("user");
+		
+		roleDAO = (RoleDAO) context.getBean("RoleDAO");
+
+		role = (Role) context.getBean("role");
+
 	}
 
 	@Test
@@ -53,12 +63,24 @@ public class UserDAOTestCase {
 		boolean flag =  userDAO.save(user);
 		System.out.println(flag);
 		
+		
+		role.setEmail("hi");
+		role.setRole("ROLE_USER");
+		role.setUserName("bye");
+		
+		
+		user.setRole(role);
+		role.setUser(user);
+
+		boolean flag1 = roleDAO.save(role);
 	
 
+		System.out.println(flag1);
 		//error - if there is in runtime errors  -  Red mark
 		//success  - if expected and actual is same  - green mark
 		//fail  - if expected and actual is different  -  blue mark
 		assertEquals("createUserTestCase",true,flag);
+		assertEquals("createUserTestCase",true,flag1);
 		
 	}
 	

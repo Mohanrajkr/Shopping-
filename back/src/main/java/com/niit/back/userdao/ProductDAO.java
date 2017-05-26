@@ -21,7 +21,7 @@ public interface ProductDAO {
 		
 		public Product get(String productId);
 		
-		
+		public void delete(String productId);
 		
 	}
 

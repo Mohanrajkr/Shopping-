@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.back.domain.Product;
 import com.niit.back.userdao.ProductDAO;
-@Repository("ProductDAO")
+
 public class ProductDAOImpl implements ProductDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -71,5 +71,11 @@ public List<Product> list() {
 		//like select * from user where id = ?
 	  return 	(Product)  sessionFactory.getCurrentSession().get(Product.class, productId);
 		
+	}
+	@Transactional
+	public void delete(String productId) {
+	Product productToDelete = new Product();
+	productToDelete.setProductId(productId);
+	sessionFactory.getCurrentSession().delete(productToDelete);
 	}
 }

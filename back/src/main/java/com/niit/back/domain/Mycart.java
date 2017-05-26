@@ -1,5 +1,7 @@
 package com.niit.back.domain;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +17,45 @@ public class Mycart {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private String cartId;
 	
+	
+	private String productId;
+	private String userId;
+	private String productName;
+	private int prize;
+	private Date date;
+	private String supplierId;
+	private String status;
+	private int quantity;
+	private int total;
+	private int days;
+	private String email;
+	
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public String getSupplierId() {
+		return supplierId;
+	}
+	public void setSupplierId(String supplierId) {
+		this.supplierId = supplierId;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
 public String getCartId() {
 		return cartId;
 	}
@@ -27,33 +68,44 @@ public String getCartId() {
 	public void setProductId(String productId) {
 		this.productId = productId;
 	}
-	public String getPrize() {
-		return prize;
-	}
-	public void setPrize(String prize) {
-		this.prize = prize;
-	}
-	public String getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(String quantity) {
-		this.quantity = quantity;
-	}
-	public String getTotal() {
-		return total;
-	}
-	public void setTotal(String total) {
-		this.total = total;
-	}
+	
 	public String getProductName() {
 		return productName;
 	}
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-private String productId;
-private String prize;
-private String quantity;
-private String total;
-private String productName;
+
+public int getPrize() {
+	return prize;
+}
+public void setPrize(int prize) {
+	this.prize = prize;
+}
+public int getQuantity() {
+	return quantity;
+}
+public void setQuantity(int quantity) {
+	this.quantity = quantity;
+}
+public int getTotal() {
+	return total;
+}
+public void setTotal(int total) {
+	this.total = total;
+}
+
+public String getUserId() {
+	return userId;
+}
+public void setUserId(String userId) {
+	this.userId = userId;
+}
+public int getDays() {
+	return days;
+}
+public void setDays(int days) {
+	this.days = days;
+}
+
 }

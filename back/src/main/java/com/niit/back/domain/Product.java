@@ -16,7 +16,39 @@ public class Product {
 	private String productId;
 	
 	private String productName;
-
+	private int prize;
+	private int quantity;
+	private String description;
+	private String categoryName;
+	private String supplierName;
+	
+	public int getPrize() {
+		return prize;
+	}
+	public void setPrize(int prize) {
+		this.prize = prize;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	public String getCategoryName() {
+		return categoryName;
+	}
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+	public String getSupplierName() {
+		return supplierName;
+	}
+	public void setSupplierName(String supplierName) {
+		this.supplierName = supplierName;
+	}
+	
+	
 	public String getProductId() {
 		return productId;
 	}
@@ -29,27 +61,13 @@ public class Product {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public String getPrize() {
-		return prize;
-	}
-	public void setPrize(String prize) {
-		this.prize = prize;
-	}
-	public String getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(String quantity) {
-		this.quantity = quantity;
-	}
+	
 	public String getDescription() {
 		return description;
 	}
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	private String prize;
-	private String quantity;
-	private String description;
-
+	
 
 }

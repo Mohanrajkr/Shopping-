@@ -47,7 +47,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	public boolean update(Category category) {
 		try
 		{
-		sessionFactory.getCurrentSession().update(category);
+		sessionFactory.getCurrentSession().saveOrUpdate(category);
 		}catch (Exception e) {
 			//if any excpetion comes during execute of try block, catch will excute
 			e.printStackTrace();
@@ -74,5 +74,11 @@ public List<Category> list() {
 		//like select * from user where id = ?
 	  return 	(Category)  sessionFactory.getCurrentSession().get(Category.class, categoryId);
 		
+	}
+	@Transactional
+	public void delete(String categoryId) {
+	Category categoryToDelete = new Category();
+	categoryToDelete.setCategoryId(categoryId);
+	sessionFactory.getCurrentSession().delete(categoryToDelete);
 	}
 }

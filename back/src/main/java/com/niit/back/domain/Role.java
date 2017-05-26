@@ -15,16 +15,16 @@ import org.springframework.stereotype.Component;
 @Component
 @Table(name = "role")
 public class Role {
+
 	@Id
 	@GeneratedValue(generator = "newGenerator")
 	@GenericGenerator(name = "newGenerator", strategy = "foreign", parameters = {
 			@Parameter(value = "user", name = "property") })
 	private String userId;
-	
+
 	private String userName;
 	private String email;
 	private String role;
-	
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "userId")
@@ -54,8 +54,6 @@ public class Role {
 		this.email = email;
 	}
 
-	
-
 	public String getRole() {
 		return role;
 	}
@@ -71,5 +69,5 @@ public class Role {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
+
 }
