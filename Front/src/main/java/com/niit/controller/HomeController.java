@@ -1,19 +1,40 @@
 package com.niit.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.niit.back.domain.Product;
+
+
+import com.niit.back.userdao.ProductDAO;
+
+
 @Controller
 
 public class HomeController {
+@Autowired
+ProductDAO productDAO;
 	@RequestMapping("/")
 	public  String    goToHome(Model model){
+		
+		List<Product> productList = productDAO.list();
+		model.addAttribute("productList", productList);
 		model.addAttribute("message", "Experience the world class Interiors");
 		return "home";
 	}
 
 
+	@RequestMapping("/homePage")
+	public String homePage(Model model)
+	{
+		model.addAttribute("isUserClickedLogout", "true");
+
+		return "home";
+	}
 @RequestMapping("/loginPage")
 public String loginPage(Model model)
 {
@@ -25,42 +46,6 @@ public String loginPage(Model model)
 public String registerPage(Model model)
 {
 	model.addAttribute("isUserClickedSignUp", "true");
-
-	return "home";
-}
-
-@RequestMapping("/CategoryPage")
-public String CategoryPage(Model model)
-{
-	model.addAttribute("isUserClickedNewCategory", "true");
-
-	return "home";
-}
-@RequestMapping("/SupplierPage")
-public String SupplierPage(Model model)
-{
-	model.addAttribute("isUserClickedSupplier", "true");
-
-	return "home";
-}
-@RequestMapping("/viewsupplierPage")
-public String viewsupplierPage(Model model)
-{
-	model.addAttribute("isUserClickedViewSupplier", "true");
-
-	return "home";
-}
-@RequestMapping("/ProductPage")
-public String ProductPage(Model model)
-{
-	model.addAttribute("isUserClickedProduct", "true");
-
-	return "home";
-}
-@RequestMapping("/viewproductPage")
-public String viewproductPage(Model model)
-{
-	model.addAttribute("isUserClickedViewProduct", "true");
 
 	return "home";
 }
@@ -101,13 +86,7 @@ public String automationPage(Model model)
 
 	return "automation";
 }
-@RequestMapping("/viewcategoryPage")
-public String viewcategoryPage(Model model)
-{
-	model.addAttribute("isUserClickedViewCategory", "true");
 
-	return "home";
-}
 
 @RequestMapping("/ShippingAddressPage")
 public String ShippingAddressPage(Model model)

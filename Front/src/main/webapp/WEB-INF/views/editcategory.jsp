@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
- <script type="text/javascript" src="resources/js/categoryvalidate.js"></script>
 </head>
 <body>
 <br>
@@ -14,14 +13,18 @@
 <br>
 <br>
 <div class="container">
-  <form action="newCategory" method="post" onsubmit="return categoryvalidate()">
+  <form action="afterEditCategory" method="post">
+  <div class="form-group">
+      <label for="id">categoryId</label>
+      <input type="text" class="form-control" name="categoryId" id="categoryid" value="${category.categoryId }" readonly="true">
+    </div>
   <div class="form-group">
       <label for="name">categoryName</label>
-      <input type="name" class="form-control" name="categoryName" id="categoryname" placeholder="Enter categoryName">
+      <input type="text" class="form-control" name="categoryName" id="categoryname" value="${category.categoryName }">
     </div>
     <div class="form-group">
       <label for="description">description</label>
-      <input type="name" class="form-control" name="description" id="description" placeholder="Enter description">
+      <input type="text" class="form-control" name="description" id="description" value="${category.description }">
     </div>
     <button type="submit" class="btn btn-default" name="">Submit</button>
   </form>

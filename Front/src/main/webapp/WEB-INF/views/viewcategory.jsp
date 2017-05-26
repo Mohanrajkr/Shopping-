@@ -11,58 +11,45 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </head>
 <body>
+<br>
+<br>
+<br>
+<br>
+<br>
 <table class = "table table-bordered">
    <caption>Category List</caption>
    
    <thead>
       <tr>
-         <th>Name</th>
+      <th>S.No</th>
+       <th>categoryId</th>
+         <th>categoryName</th>
          <th>Description</th>
       </tr>
    </thead>
    
-   <tbody>
-      <tr>
-         <td>Kitchen&Dinning</td>
-         <td>Product of kitchen and dinning</td>
-      </tr>
+   
+ <c:forEach items="${categoryList}" var="category" varStatus="status">
   <tr>
-         <td>Dinning&Serving</td>
-         <td>Product of dinning and serving</td>
-      </tr>
-       <tr>
-         <td>Furniture</td>
-         <td>Product of furniture</td>
-      </tr>
-       <tr>
-         <td>Furnising</td>
-         <td>Product of furnising</td>
-      </tr>
-  <tr>
-         <td>Smart Home Automation</td>
-         <td>Product of smart home automation</td>
-      </tr>
-       <tr>
-         <td>Tools&Hardwares</td>
-         <td>Product of tools and hardwares</td>
-      </tr>
-       <tr>
-         <td>Home Decor</td>
-         <td>Product of home decor</td>
-      </tr>
-       <tr>
-         <td>Lighting</td>
-         <td>Product of lighting</td>
-      </tr>
+  <td>${status.count}</td>
+  <td>${category.categoryId}</td>
+   <td>${category.categoryName}</td>
+    <td>${category.description}</td>
+    <td><a href="editCategory?categoryId=${category.categoryId}">edit</a></td>
+    <td><a href="deleteCategory?categoryId=${category.categoryId}">delete</a></td>
+  
+  </tr>
+  
+  </c:forEach>
  
  
  
  
  
- 
-   </tbody>
+  
 	
 </table>
 

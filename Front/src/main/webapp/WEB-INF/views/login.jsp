@@ -14,12 +14,12 @@
 <div class="container">
   <form action="signIn" method="post">
 <div class="form-group">
-      <label for="name">email</label>
-      <input type="email" class="form-control" name="Email"id="email" placeholder="Enter email">
+      <label for="email">email</label>
+      <input type="email" class="form-control" name="email"id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label for="pwd">password</label>
-      <input type="password" class="form-control" name="Password"id="pwd" placeholder="Enter password">
+      <label for="password">password</label>
+      <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
     </div>
    
     <button type="submit" class="btn btn-default">Submit</button>

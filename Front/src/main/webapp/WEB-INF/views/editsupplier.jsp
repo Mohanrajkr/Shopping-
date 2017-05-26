@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<script type="text/javascript" src="resources/js/suppliervalidate.js"></script>
 </head>
 <body>
 <br>
@@ -14,18 +13,22 @@
 <br>
 <br>
 <div class="container">
-  <form action="newSupplier" method="post" onsubmit="return suppliervalidate()">
+  <form action="afterEditSupplier" method="post" >
+  <div class="form-group">
+         <label for="id">supplierId</label>
+      <input type="id" class="form-control" name="supplierId" id="supplierid" value="${supplier.supplierId }" readonly="true">
+    </div>
   <div class="form-group">
          <label for="name">supplierName</label>
-      <input type="name" class="form-control" name="supplierName" id="suppliername" placeholder="Enter supplierName">
+      <input type="name" class="form-control" name="supplierName" id="suppliername" value="${supplier.supplierName }" >
     </div>
     <div class="form-group">
       <label for="address">address</label>
-      <input type="name" class="form-control" name="address" id="address" placeholder="Enter address">
+      <input type="name" class="form-control" name="address" id="address" value="${supplier.address }" >
     </div>
     <div class="form-group">
       <label for="mobile number">mobileNumber</label>
-      <input type="mobile number" class="form-control" name="mobileNumber" id="mobilenumber" placeholder="Enter mobileNumber">
+      <input type="mobile number" class="form-control" name="mobileNumber" id="mobilenumber" value="${supplier.mobileNumber }" >
     </div>
     <button type="submit" class="btn btn-default" name="">Submit</button>
   </form>
