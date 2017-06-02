@@ -18,7 +18,7 @@ public class Mycart {
 	private String cartId;
 	
 	
-	private String productId;
+	private int productId;
 	private String userId;
 	private String productName;
 	private int prize;
@@ -62,10 +62,10 @@ public String getCartId() {
 	public void setCartId(String cartId) {
 		this.cartId = cartId;
 	}
-	public String getProductId() {
+	public int getProductId() {
 		return productId;
 	}
-	public void setProductId(String productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 	

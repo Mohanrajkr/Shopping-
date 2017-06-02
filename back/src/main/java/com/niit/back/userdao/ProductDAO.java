@@ -9,7 +9,7 @@ public interface ProductDAO {
 		public  boolean save(Product product);
 		
 		// update the user details  - update
-		public boolean update(Product product);
+	
 		
 		
 		// get all users   - list
@@ -19,9 +19,13 @@ public interface ProductDAO {
 		
 		//get user details based on userID
 		
-		public Product get(String productId);
+
 		
-		public void delete(String productId);
+		public void delete(int productId);
+
+		public Product get(int productId);
+
+		public boolean saveOrUpdate(Product product);
 		
 	}
 

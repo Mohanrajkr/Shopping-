@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.niit.back.domain.Mycart;
+import com.niit.back.domain.Product;
 import com.niit.back.userdao.MycartDAO;
 
 @Repository("MycartDAO")
@@ -33,7 +34,7 @@ public class MycartDAOImpl implements MycartDAO{
 	}
 
 	public boolean validate(String email, String password) {
-		Query query=sessionFactory.getCurrentSession().createQuery(" from Mykart where email = ? and password = ?");
+		Query query=sessionFactory.getCurrentSession().createQuery(" from Mycart where email = ? and password = ?");
 		query.setString(1, email);     
 		query.setString(2, password);
 		 if(  query.uniqueResult()  == null)
@@ -58,7 +59,7 @@ public class MycartDAOImpl implements MycartDAO{
 	}
 
 
-	public boolean saveOrUpdate(Mycart mycart) {
+	public boolean save(Mycart mycart) {
 		try
 		{
 		sessionFactory.getCurrentSession().saveOrUpdate(mycart);
@@ -71,7 +72,7 @@ public class MycartDAOImpl implements MycartDAO{
 
 
 	public List<Mycart> getEmail(String email) {
-		String hql = "from Mykart where email ='" + email +"'";
+		String hql = "from Mycart where email ='" + email +"'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
 		List<Mycart> list = (List<Mycart>) query.list();
@@ -81,7 +82,7 @@ public class MycartDAOImpl implements MycartDAO{
 
 
 	public Mycart getByProductName(String productName) {
-		String hql = "from Mykart where Productname ='" + productName + "'";
+		String hql = "from Mycart where Productname ='" + productName + "'";
 		Query query = (Query) sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
 		List<Mycart> listMycart = (List<Mycart>) (query).list();
@@ -93,7 +94,7 @@ public class MycartDAOImpl implements MycartDAO{
 	}
 
 
-	public boolean itemAlreadyExist(String email, String productId, boolean b) {
+	public boolean itemAlreadyExist(String email, int productId, boolean b) {
 		String hql = "from Mycart where email= '" + email + "' and " + " id ='" + productId+"'";
 		org.hibernate.Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
@@ -105,7 +106,7 @@ public class MycartDAOImpl implements MycartDAO{
 	}
 
 
-	public Mycart getByUserandProduct(String email, String productId) {
+	public Mycart getByUserandProduct(String email, int productId) {
 		String hql = "from Mycart where email= '" + email + "' and " + " productId ='" + productId+"'";
 		org.hibernate.Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
@@ -117,6 +118,16 @@ public class MycartDAOImpl implements MycartDAO{
 		return null;
 	}
 
+	
+	@Transactional
+	public Mycart get(String cartId) {
+		
+		//get method get the date from user table based on primary key i.e., id
+		// and set it to User class
+		//like select * from user where id = ?
+	  return 	(Mycart)  sessionFactory.getCurrentSession().get(Mycart.class, cartId);
+		
+	}
 
 	
 	

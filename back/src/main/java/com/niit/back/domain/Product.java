@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String productId;
+	private int productId;
 	
 	private String productName;
 	private int prize;
@@ -49,10 +49,10 @@ public class Product {
 	}
 	
 	
-	public String getProductId() {
+	public int getProductId() {
 		return productId;
 	}
-	public void setProductId(String productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 	public String getProductName() {

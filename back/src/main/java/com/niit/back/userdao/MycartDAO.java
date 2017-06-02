@@ -21,15 +21,21 @@ public boolean validate(String email, String password);
 	
 	public void delete(String cartId);
 
-	public boolean saveOrUpdate(Mycart mycart);
+	public boolean save(Mycart mycart);
 	
 	public Mycart getByProductName(String productName);
 	
 	public Long getTotal(String cartId);
 
-	public boolean itemAlreadyExist(String email, String productId, boolean b);
 
-	public Mycart getByUserandProduct(String email, String productId);
+
+	public Mycart getByUserandProduct(String email, int productId);
+
+
+	public boolean itemAlreadyExist(String name, int productId, boolean b);
+
+
+	public Mycart get(String cartId);
 
 	
 	

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.back.domain.Mycart;
 import com.niit.back.domain.Product;
 import com.niit.back.userdao.ProductDAO;
 
@@ -44,19 +45,20 @@ public class ProductDAOImpl implements ProductDAO {
 	 * If the record is updated successfully, it will return true
 	 * else will return false
 	 */
+	
+	
 	@Transactional
-	public boolean update(Product product) {
+	public boolean saveOrUpdate(Product product) {
 		try
 		{
-		sessionFactory.getCurrentSession().update(product);
+		sessionFactory.getCurrentSession().saveOrUpdate(product);
 		}catch (Exception e) {
-			//if any excpetion comes during execute of try block, catch will excute
-			e.printStackTrace();
+						e.printStackTrace();
 			return false;
 		}
 		return true;
 	}
-	
+
 	@Transactional
 public List<Product> list() {
 		
@@ -64,7 +66,7 @@ public List<Product> list() {
 		return  sessionFactory.getCurrentSession().createQuery("from Product").list();
 	}
 	@Transactional
-	public Product get(String productId) {
+	public Product get(int productId) {
 		
 		//get method get the date from user table based on primary key i.e., id
 		// and set it to User class
@@ -73,7 +75,7 @@ public List<Product> list() {
 		
 	}
 	@Transactional
-	public void delete(String productId) {
+	public void delete(int productId) {
 	Product productToDelete = new Product();
 	productToDelete.setProductId(productId);
 	sessionFactory.getCurrentSession().delete(productToDelete);
