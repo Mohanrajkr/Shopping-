@@ -53,7 +53,7 @@ public class ProductController {
 	}
 	
 	@RequestMapping("deleteProduct")
-	public String deleteProduct(@RequestParam(value = "productId") String productId) {
+	public String deleteProduct(@RequestParam(value = "productId") int productId) {
 
 		productDAO.delete(productId);
 		return "redirect:/viewproductPage";
@@ -61,7 +61,7 @@ public class ProductController {
 	}
 
 	@RequestMapping("editProduct")
-	public String editProduct(@RequestParam(value = "productId") String productId, Model model) {
+	public String editProduct(@RequestParam(value = "productId") int productId, Model model) {
 
 		Product product = productDAO.get(productId);
 		model.addAttribute("product", product);
@@ -73,7 +73,7 @@ public class ProductController {
 	
 	@RequestMapping("afterEditProduct")
 	public String afterEditProduct(@ModelAttribute Product product, Model model ){
-		productDAO.update(product);
+		productDAO.saveOrUpdate(product);
 		
 		return "redirect:/viewproductPage";
 	}

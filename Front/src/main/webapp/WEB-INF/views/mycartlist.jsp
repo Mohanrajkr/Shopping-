@@ -30,13 +30,14 @@
 <td>${status.count}</td>
 
 <td>${mycart.productName}</td>
+<td>${mycart.prize}</td>
 <td>${mycart.quantity}</td>
+<td>${mycart.date}</td>
 <td>${mycart.days}</td>
 <td>${mycart.status}</td>
-<td>${mycart.prize}</td>
 <td>${mycart.total}</td>
 
-<td><a href="deletemyCart?cartId=${mycart.cartId}">DELETE</a></td>
+<td><a href="removecart?cartId=${mycart.cartId}">DELETE</a></td>
 </tr>
 </c:forEach>
 <tr>

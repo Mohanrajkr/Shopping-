@@ -103,7 +103,7 @@ input[type=text]:focus {
     
       <c:if test="${isUser =='true'}">
       <ul class="nav navbar-nav navbar-right"> 
-	     	 <li><a href=""><br><span class="glyphicon glyphicon-shopping-cart"></span> Mycart</a></li></ul>
+	     	 <li><a href="mycartlistpage"><br><span class="glyphicon glyphicon-shopping-cart"></span> Mycart</a></li></ul>
 	</c:if>
 	  
 	  <c:if test="${pageContext.request.userPrincipal.name!='isUser' && name !=null}">

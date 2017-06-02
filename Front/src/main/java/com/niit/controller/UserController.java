@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.niit.back.domain.Product;
 import com.niit.back.domain.Role;
+import com.niit.back.domain.ShippingAddress;
 import com.niit.back.domain.User;
 import com.niit.back.userdao.ProductDAO;
 import com.niit.back.userdao.RoleDAO;
+import com.niit.back.userdao.ShippingAddressDAO;
 import com.niit.back.userdao.UserDAO;
 
 @Controller
@@ -41,6 +43,7 @@ public class UserController {
 
 		userDAO.save(user);
 		roleDAO.save(role);
+		
 
 		model.addAttribute("isUserClickedLogin", "true");
 		return "home";
