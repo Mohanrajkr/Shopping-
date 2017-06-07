@@ -31,18 +31,18 @@
 
 <td>${mycart.productName}</td>
 <td>${mycart.prize}</td>
-<td>${mycart.quantity}</td>
+<td>${mycart.quantity}</td> 
 <td>${mycart.date}</td>
 <td>${mycart.days}</td>
 <td>${mycart.status}</td>
 <td>${mycart.total}</td>
 
-<td><a href="removecart?cartId=${mycart.cartId}">DELETE</a></td>
+<td><a  class="btn btn-danger" href="removecart?cartId=${mycart.cartId}">DELETE</a></td>
 </tr>
 </c:forEach>
 <tr>
 <td> Grand Total: </td>
-<td> ${total}</td> 
+<td> ${mycart.total}</td> 
 </tr>
 <tr>
 <td><a href="proceed"><button>proceed delivery</button></a>

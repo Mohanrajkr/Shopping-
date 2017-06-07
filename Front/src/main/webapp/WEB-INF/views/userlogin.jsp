@@ -23,6 +23,15 @@
 <c:when test="${isUserClickedAddtocart== 'true'}">
 <jsp:include page="mycartlist.jsp"></jsp:include>
 </c:when>
+<c:when test="${isUserClickedShippingaddress=='true'}">
+<jsp:include page="viewshippingaddress.jsp"></jsp:include>
+</c:when>
+<c:when test="${newShippingaddressClicked=='true' }">
+ <jsp:include page="Shippingaddress.jsp"></jsp:include>
+</c:when>
+ <c:when test="${editShippingAddressClicked=='true'}">    
+  <jsp:include page="editshippingaddress.jsp"></jsp:include>
+     </c:when>
 </c:choose>
 </body>
 </html>

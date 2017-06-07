@@ -39,8 +39,8 @@
    <td>${supplier.supplierName}</td>
    <td>${supplier.address}</td>
    <td>${supplier.mobileNumber}</td>
-    <td><a href="editSupplier?supplierId=${supplier.supplierId}">edit</a></td>
-    <td><a href="deleteSupplier?supplierId=${supplier.supplierId}">delete</a></td>
+    <td><a class="btn btn-info" href="editSupplier?supplierId=${supplier.supplierId}">edit</a></td>
+    <td><a class="btn btn-info" href="deleteSupplier?supplierId=${supplier.supplierId}">delete</a></td>
   
   </tr>
   

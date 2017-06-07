@@ -9,17 +9,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.niit.back.dao.ProductDAO;
+import com.niit.back.dao.RoleDAO;
+import com.niit.back.dao.ShippingaddressDAO;
+import com.niit.back.dao.UserDAO;
 import com.niit.back.domain.Product;
 import com.niit.back.domain.Role;
-import com.niit.back.domain.ShippingAddress;
+import com.niit.back.domain.Shippingaddress;
 import com.niit.back.domain.User;
-import com.niit.back.userdao.ProductDAO;
-import com.niit.back.userdao.RoleDAO;
-import com.niit.back.userdao.ShippingAddressDAO;
-import com.niit.back.userdao.UserDAO;
 
 @Controller
 public class UserController {
+	@Autowired
+	private ShippingaddressDAO shippingaddressDAO;
 	@Autowired
 	private RoleDAO roleDAO;
 	@Autowired
@@ -31,7 +33,7 @@ public class UserController {
 	private ProductDAO productDAO;
 
 	@RequestMapping("newUser")
-	public String newUser(@ModelAttribute User user, Model model) {
+	public String newUser(@ModelAttribute User user,@ModelAttribute Shippingaddress shippingaddress, Model model) {
 
 		role.setRole("ROLE_USER");
 		role.setUserName(user.getUserName());
@@ -42,7 +44,11 @@ public class UserController {
 		role.setUser(user);
 
 		userDAO.save(user);
+		
 		roleDAO.save(role);
+		
+		shippingaddress.setEmail(user.getEmail());
+		shippingaddressDAO.saveOrUpdate(shippingaddress);
 		
 
 		model.addAttribute("isUserClickedLogin", "true");

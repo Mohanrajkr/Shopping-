@@ -47,8 +47,8 @@
    <td>${product.supplierName}</td>
     <td>${product.description}</td>
    
-    <td><a href="editProduct?productId=${product.productId}">edit</a></td>
-    <td><a href="deleteProduct?productId=${product.productId}">delete</a></td>
+    <td><a class="btn btn-info" href="editProduct?productId=${product.productId}">edit</a></td>
+    <td><a class="btn btn-info" href="deleteProduct?productId=${product.productId}">delete</a></td>
   
   </tr>
   

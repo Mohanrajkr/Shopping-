@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.niit.back.dao.CategoryDAO;
 import com.niit.back.domain.Category;
-import com.niit.back.userdao.CategoryDAO;
 
 @Controller
 public class CategoryController {

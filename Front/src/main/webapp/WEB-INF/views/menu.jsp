@@ -39,14 +39,16 @@ input[type=text]:focus {
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top w3-card-4">
   <div class="container-fluid">
-    <div class="navbar-header">
+   <ul class="nav navbar-nav">
+        <li class="active"><a href=""><br>HomePlus</a></li></ul>
+    <!-- <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
       <a class="navbar" href="#"><img alt="" src="resources/images/logo.png" style="height: 100%;"></a>
-    </div>
+    </div> -->
     <div class="collapse navbar-collapse" id="myNavbar">
        
        <ul class="nav navbar-nav">
@@ -96,10 +98,7 @@ input[type=text]:focus {
       </ul>     
      </c:if>
     
-   <c:if test="${pageContext.request.userPrincipal.name != null }">
-      <ul class="nav navbar-nav navbar-right"> 
-    		<li><a href="homePage"><br><span class="glyphicon glyphicon-logout"></span> Logout</a></li></ul>
-  </c:if>
+   
     
       <c:if test="${isUser =='true'}">
       <ul class="nav navbar-nav navbar-right"> 
@@ -111,15 +110,19 @@ input[type=text]:focus {
 	  <li><a href="#"><br><span class="glyphicon glyphicon-about"></span>ABOUT</a></li>
 	  </ul>
 	</c:if>
-	  
-	  
+	 <c:choose> 
+	  <c:when test="${isUserLoggedIn=='true'}">
 	  
 	 <ul class="nav navbar-nav navbar-right"> 
     	   <li><a href="registerPage"><br><span class="glyphicon glyphicon-pencil"></span>SignUp</a></li>
       	   <li><a href="loginPage"><br><span class="glyphicon glyphicon-user"></span>Login</a></li>
  	 </ul>
- 	
-
+ 	</c:when>
+ 	<c:otherwise>
+ 	<ul class="nav navbar-nav navbar-right"> 
+    		<li><a href="homePage"><br><span class="glyphicon glyphicon-logout"></span> Logout</a></li></ul>
+</c:otherwise>
+</c:choose>
     
       
     </div>

@@ -38,8 +38,8 @@
   <td>${category.categoryId}</td>
    <td>${category.categoryName}</td>
     <td>${category.description}</td>
-    <td><a href="editCategory?categoryId=${category.categoryId}">edit</a></td>
-    <td><a href="deleteCategory?categoryId=${category.categoryId}">delete</a></td>
+    <td><a class="btn btn-info" href="editCategory?categoryId=${category.categoryId}">edit</a></td>
+    <td><a class="btn btn-info" href="deleteCategory?categoryId=${category.categoryId}">delete</a></td>
   
   </tr>
   

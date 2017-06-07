@@ -5,9 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.niit.back.dao.RoleDAO;
+import com.niit.back.dao.UserDAO;
 import com.niit.back.domain.Role;
-import com.niit.back.userdao.RoleDAO;
-import com.niit.back.userdao.UserDAO;
 
 public class LoginController {
 	@Autowired

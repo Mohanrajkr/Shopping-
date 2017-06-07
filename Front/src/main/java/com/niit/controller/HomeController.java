@@ -7,10 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.niit.back.dao.ProductDAO;
 import com.niit.back.domain.Product;
-
-
-import com.niit.back.userdao.ProductDAO;
 
 
 @Controller

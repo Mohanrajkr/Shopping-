@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.niit.back.dao.MycartDAO;
+import com.niit.back.dao.ProductDAO;
+import com.niit.back.dao.UserDAO;
 import com.niit.back.domain.Mycart;
 import com.niit.back.domain.Product;
 import com.niit.back.domain.User;
-import com.niit.back.userdao.MycartDAO;
-import com.niit.back.userdao.ProductDAO;
-import com.niit.back.userdao.UserDAO;
 
 @Controller
 public class CartController {
@@ -62,7 +62,7 @@ public class CartController {
 
 		if (product.getQuantity() > 0) {
 
-			if (mycartDAO.itemAlreadyExist(p.getName(), productId, true)) {
+			if (mycartDAO.itemAlreadyExist(user.getUserName(), productId, true)) {
 				int qty = crt.getQuantity() + 1;
 				crt.setQuantity(qty);
 				crt.setTotal(product.getPrize() * qty);

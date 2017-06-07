@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.niit.back.dao.CategoryDAO;
+import com.niit.back.dao.ProductDAO;
+import com.niit.back.dao.SupplierDAO;
 import com.niit.back.domain.Category;
 import com.niit.back.domain.Product;
 import com.niit.back.domain.Supplier;
-import com.niit.back.userdao.CategoryDAO;
-import com.niit.back.userdao.ProductDAO;
-import com.niit.back.userdao.SupplierDAO;
 import com.niit.front.util.FileUtil;
 @Controller
 public class ProductController {

@@ -82,7 +82,7 @@ $(document).ready(function() {
 </head>
 <body>
 
- 
+ <c:forEach items="${productList}" var="product">
     <div class="well well-sm">
         <strong>Display</strong>
         <div class="btn-group">
@@ -92,7 +92,7 @@ $(document).ready(function() {
         </div>
     </div>
    
- <c:forEach items="${productList}" var="product">
+ 
     <div id="products" class="row list-group">
         <div class="item  col-xs-4 col-lg-4">
             <div class="thumbnail">
