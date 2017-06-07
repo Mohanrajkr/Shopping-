@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 @Table(name = "user")
 public class User {
 	@Id
-	@Column(name = "userId")
 	@GeneratedValue
 	private String userId;
 

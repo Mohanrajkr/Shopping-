@@ -7,8 +7,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.niit.back.dao.SupplierDAO;
 import com.niit.back.domain.Supplier;
-import com.niit.back.userdao.SupplierDAO;
 
 public class SupplierDAOTestCase {
 @Autowired static AnnotationConfigApplicationContext context;

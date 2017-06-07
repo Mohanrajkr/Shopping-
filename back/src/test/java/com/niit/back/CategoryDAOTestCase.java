@@ -6,7 +6,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import com.niit.back.userdao.CategoryDAO;
+
+import com.niit.back.dao.CategoryDAO;
 import com.niit.back.domain.Category;
 
 public class CategoryDAOTestCase {

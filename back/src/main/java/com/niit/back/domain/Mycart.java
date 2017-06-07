@@ -107,5 +107,9 @@ public int getDays() {
 public void setDays(int days) {
 	this.days = days;
 }
+public void setShippingId(int shippingId) {
+	// TODO Auto-generated method stub
+	
+}
 
 }

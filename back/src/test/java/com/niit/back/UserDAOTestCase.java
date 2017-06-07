@@ -7,10 +7,10 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.niit.back.dao.RoleDAO;
+import com.niit.back.dao.UserDAO;
 import com.niit.back.domain.Role;
 import com.niit.back.domain.User;
-import com.niit.back.userdao.RoleDAO;
-import com.niit.back.userdao.UserDAO;
 
 public class UserDAOTestCase {
 	
