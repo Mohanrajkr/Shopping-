@@ -3,11 +3,15 @@ package com.niit.controller;
 import java.security.Principal;
 import java.util.List;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 import com.niit.back.dao.ProductDAO;
 import com.niit.back.dao.RoleDAO;
@@ -82,5 +86,18 @@ public class UserController {
 			return "home";
 		}
 	}
+
+	
+	/*@RequestMapping("/secure_logout")
+	public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (auth != null) {
+			new SecurityContextLogoutHandler().logout(request, response, auth);
+		}
+		SecurityContextHolder.getContext().setAuthentication(null);
+		ModelAndView mv = new ModelAndView("redirect:/homePage");
+		return mv;
+	}
+*/
 
 }

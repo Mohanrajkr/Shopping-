@@ -46,7 +46,8 @@ public class CartController {
 		String email = p.getName();
 		User user = userDAO.get(email);
 		List<Mycart> mycartList = mycartDAO.getEmail(email);
-
+		Long GrandTotal = mycartDAO.getTotal(email);
+		model.addAttribute("GrandTotal", GrandTotal);
 		model.addAttribute("mycartList", mycartList);
 		model.addAttribute("isUserClickedAddtocart", true);
 
@@ -62,13 +63,14 @@ public class CartController {
 
 		if (product.getQuantity() > 0) {
 
-			if (mycartDAO.itemAlreadyExist(user.getUserName(), productId, true)) {
+			if (mycartDAO.itemAlreadyExist(user.getEmail(),productId)== true) {
 				int qty = crt.getQuantity() + 1;
 				crt.setQuantity(qty);
 				crt.setTotal(product.getPrize() * qty);
-				boolean flag = mycartDAO.save(crt);
+				boolean flag = mycartDAO.update(crt);
 				System.out.println(flag);
 				System.out.println(qty);
+				
 			} else {
 
 				Random t = new Random();
@@ -79,6 +81,7 @@ public class CartController {
 		
 				mycart.setEmail(p.getName());
 				mycart.setPrize(product.getPrize());
+				mycart.setProductId(productId);
 				mycart.setProductName(product.getProductName());
 				mycart.setQuantity(1);
 				mycart.setStatus("N");

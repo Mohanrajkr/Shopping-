@@ -42,7 +42,7 @@
 </c:forEach>
 <tr>
 <td> Grand Total: </td>
-<td> ${mycart.total}</td> 
+<td> <c:out value="${GrandTotal}"></c:out></td> 
 </tr>
 <tr>
 <td><a href="proceed"><button>proceed delivery</button></a>

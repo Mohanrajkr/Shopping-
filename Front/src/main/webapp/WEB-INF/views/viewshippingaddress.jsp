@@ -38,7 +38,7 @@ Zipcode:${shipping.zipcode}
 
 
  
-<a href="shippingAddress?shippingId=${shipping.shippingId}"><input style="color:green;" type="button" name="button" value="Deliver Here"/></a>
+<a href="shippingAddress?shippingId=${shipping.shippingId}"><input style="color:green;" type="button" name="button" value="DeliverHere"/></a>
 	</div>					
  
 </c:forEach>

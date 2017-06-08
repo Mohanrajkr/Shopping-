@@ -17,7 +17,7 @@
 <br>
 
 
-<jsp:include page="carousel.jsp"></jsp:include>
+
 
 <br>
 
@@ -46,8 +46,11 @@
 <jsp:include page="Product.jsp"></jsp:include>
 </c:if>
 <br>
-
-
+<c:if test="${ isUserClickedhomePage=='true'}">
+<jsp:include page="home.jsp"></jsp:include>
+<jsp:include page="carousel.jsp"></jsp:include>
+</c:if>
+<br>
 
  
 </body>

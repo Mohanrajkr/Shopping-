@@ -27,10 +27,10 @@ ProductDAO productDAO;
 
 
 	@RequestMapping("/homePage")
-	public String homePage(Model model)
-	{
-		model.addAttribute("isUserClickedLogout", "true");
+	public String goHome(Model model)
 
+	{
+		model.addAttribute("isUserClickedhomePage", "true");
 		return "home";
 	}
 @RequestMapping("/loginPage")

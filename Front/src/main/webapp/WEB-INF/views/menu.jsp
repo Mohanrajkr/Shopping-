@@ -40,7 +40,7 @@ input[type=text]:focus {
 <nav class="navbar navbar-inverse navbar-fixed-top w3-card-4">
   <div class="container-fluid">
    <ul class="nav navbar-nav">
-        <li class="active"><a href=""><br>HomePlus</a></li></ul>
+        <li class=""><a href=""><br>HomePlus</a></li></ul>
     <!-- <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -120,7 +120,7 @@ input[type=text]:focus {
  	</c:when>
  	<c:otherwise>
  	<ul class="nav navbar-nav navbar-right"> 
-    		<li><a href="homePage"><br><span class="glyphicon glyphicon-logout"></span> Logout</a></li></ul>
+    		<li><a href="loginPage"><br><span class="glyphicon glyphicon-logout"></span> Logout</a></li></ul>
 </c:otherwise>
 </c:choose>
     
