@@ -22,7 +22,7 @@ public boolean validate(String email, String password);
 	public void delete(String cartId);
 
 	public boolean save(Mycart mycart);
-	
+	public boolean update(Mycart mycart);
 	public Mycart getByProductName(String productName);
 	
 	public Long getTotal(String cartId);
@@ -32,7 +32,7 @@ public boolean validate(String email, String password);
 	public Mycart getByUserandProduct(String email, int productId);
 
 
-	public boolean itemAlreadyExist(String email, int productId, boolean b);
+	public boolean itemAlreadyExist(String email, int productId);
 
 
 	public Mycart get(String cartId);

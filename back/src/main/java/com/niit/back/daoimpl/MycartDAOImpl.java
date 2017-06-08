@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,6 +72,17 @@ public class MycartDAOImpl implements MycartDAO{
 	}
 
 
+	@Transactional
+	public boolean update(Mycart mycart) {
+		try {
+			sessionFactory.getCurrentSession().update(mycart);
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+	
 	public List<Mycart> getEmail(String email) {
 		String hql = "from Mycart where email ='" + email +"'";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
@@ -94,8 +106,8 @@ public class MycartDAOImpl implements MycartDAO{
 	}
 
 
-	public boolean itemAlreadyExist(String email, int productId, boolean b) {
-		String hql = "from Mycart where email= '" + email + "' and " + " id ='" + productId+"'";
+	public boolean itemAlreadyExist(String email, int productId) {
+		String hql = "from Mycart where email= '" + email + "' and " + " productId ='" + productId+"'";
 		org.hibernate.Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
 		List<Mycart> list = (List<Mycart>) query.list();
@@ -132,9 +144,12 @@ public class MycartDAOImpl implements MycartDAO{
 	
 	
 
-	public Long getTotal(String cartId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Long getTotal(String email) {
+		
+		String hql = "select sum(total) from Mycart where email = " + "'" + email + "'" + "and status = '" + "N" +"'";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		Long sum = (Long) query.uniqueResult();
+			return sum;
 	}
 
 

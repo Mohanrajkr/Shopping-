@@ -19,11 +19,9 @@ public class Mycart {
 	
 	
 	private int productId;
-	private String userId;
 	private String productName;
 	private int prize;
 	private Date date;
-	private String supplierId;
 	private String status;
 	private int quantity;
 	private int total;
@@ -43,12 +41,7 @@ public class Mycart {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public String getSupplierId() {
-		return supplierId;
-	}
-	public void setSupplierId(String supplierId) {
-		this.supplierId = supplierId;
-	}
+	
 	public String getStatus() {
 		return status;
 	}
@@ -95,12 +88,7 @@ public void setTotal(int total) {
 	this.total = total;
 }
 
-public String getUserId() {
-	return userId;
-}
-public void setUserId(String userId) {
-	this.userId = userId;
-}
+
 public int getDays() {
 	return days;
 }
