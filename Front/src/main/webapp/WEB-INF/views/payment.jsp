@@ -21,8 +21,9 @@ body { margin-top:20px; }
 <br>
 <br>
 <div class="container">
-<form action="thankyouPage" method="post">
-    <div class="row">
+<!-- <form action="thankyouPage" method="post">
+ -->    
+ <div class="row">
         <div class="col-xs-12 col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -76,9 +77,10 @@ body { margin-top:20px; }
             </ul>
             <br/> -->
             
-            <a class="btn btn-success btn-lg btn-block" role="button">Checkout</a>
+            <a href="thankyouPage"class="btn btn-success btn-lg btn-block" role="button">Checkout</a>
         </div>
     </div>
+    </form>
 </div>
 </body>
 </html>

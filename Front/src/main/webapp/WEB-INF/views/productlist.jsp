@@ -81,19 +81,20 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-
+<br>
+<br>
  <c:forEach items="${productList}" var="product">
-    <div class="well well-sm">
+   <!--  <div class="well well-sm">
         <strong>Display</strong>
         <div class="btn-group">
             <a href="#" id="list" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-th-list">
             </span>List</a> <a href="#" id="grid" class="btn btn-default btn-sm"><span
                 class="glyphicon glyphicon-th"></span>Grid</a>
         </div>
-    </div>
+    </div> -->
    
  
-    <div id="products" class="row list-group">
+    <div id="products" class="column list-group">
         <div class="item  col-xs-4 col-lg-4">
             <div class="thumbnail">
                 <a href="description?productId=${product.productId}" >

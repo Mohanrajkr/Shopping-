@@ -38,7 +38,18 @@ public class UserController {
 
 	@RequestMapping("newUser")
 	public String newUser(@ModelAttribute User user,@ModelAttribute Shippingaddress shippingaddress, Model model) {
-
+String message;
+	
+		
+		if(userDAO.isAllReadyRegister(user.getEmail(), true) && userDAO.isAllReadyRegisterMobileNumber(user.getMobileNumber(), true)){		
+			
+			message = "Your EmailId and Contact All Ready Registered";
+		} else if (userDAO.isAllReadyRegister(user.getEmail(), true)) {
+			message = "Your Email Id All Ready Registered";
+		}else if (userDAO.isAllReadyRegisterMobileNumber(user.getMobileNumber(), true)) {
+			message = "Your Mobile Number All Ready Registered";
+		}
+		else{
 		role.setRole("ROLE_USER");
 		role.setUserName(user.getUserName());
 		role.setEmail(user.getEmail());
@@ -53,8 +64,9 @@ public class UserController {
 		
 		shippingaddress.setEmail(user.getEmail());
 		shippingaddressDAO.saveOrUpdate(shippingaddress);
-		
-
+		message = "Your Have Successfully Registered";
+		}
+		model.addAttribute("message", message);
 		model.addAttribute("isUserClickedLogin", "true");
 		return "home";
 

@@ -16,7 +16,7 @@
   <form action="newUser" method="post" onsubmit="return validate()">
   <div class="form-group">
   <label for="name" >userName</label>
-      <input type="text" class="form-control" name="userName" id="username"  placeholder="Enter username">
+      <input type="name" class="form-control" name="userName" id="username"  placeholder="Enter username">
     </div>
     <div class="form-group">
      
@@ -29,7 +29,7 @@
       <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
     </div>
     <label for="mobile number">mobileNumber</label>
-    <input type="text" class="form-control" name="mobileNumber" id="mobilenumber" placeholder="Enter moblie number">
+    <input type="mobile number" class="form-control" name="mobileNumber" id="mobilenumber" placeholder="Enter moblie number">
   </div>
   <div class="form-group">
   <label for="address"> address</label>

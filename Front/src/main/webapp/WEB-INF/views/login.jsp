@@ -11,6 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+ <h3 style="color:red"><b>${message}</b></h3>
 <div class="container">
   <form action="signIn" method="post">
 <div class="form-group">
