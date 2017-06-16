@@ -71,4 +71,34 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 
+	
+	@Transactional
+	public boolean isAllReadyRegister(String email, boolean b) {
+		
+		String hql = "from User where email ='"+ email +"'";
+				
+					
+		org.hibernate.Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<User> list = (List<User>) query.list();
+		if (list != null && !list.isEmpty()) {
+			return true;
+		}
+		return false;
+
+	}
+	
+	@Transactional
+	public boolean isAllReadyRegisterMobileNumber(String mobileNumber, boolean b) {
+		String hql = "from User where mobileNumber ='"+ mobileNumber +"'";
+		
+		
+		org.hibernate.Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<User> list = (List<User>) query.list();
+		if (list != null && !list.isEmpty()) {
+			return true;
+		}
+		return false;
+	}
 }

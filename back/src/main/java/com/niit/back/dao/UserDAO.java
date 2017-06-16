@@ -24,9 +24,10 @@ public interface UserDAO {
 		
 		public User get(String email);
 		
+		public boolean isAllReadyRegister(String email, boolean b);
 		
-		
-		
+		public boolean isAllReadyRegisterMobileNumber(String mail, boolean b);
+
 		
 		
 		
