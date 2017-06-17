@@ -5,10 +5,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -30,6 +33,9 @@ public class CartController {
 	private MycartDAO mycartDAO;
 	@Autowired
 	private Mycart mycart;
+	
+	@Autowired
+	private HttpSession session;
 
 	@RequestMapping("productDescription")
 	public String productDescription(@RequestParam("productId") int productId, Model model) {
@@ -114,8 +120,43 @@ public class CartController {
 
 	}
 	
+	
+	/*@RequestMapping("/mycart/addQuantity/{productId}")
+	public String updateQuantity(@PathVariable("productId") int cartId) {
+		String loggedInUserid = (String) session.getAttribute("loggedInUserId");
+		mycart = mycartDAO.get(cartId);
+		int presentQuantity = mycartDAO.getQuantity(loggedInUserid, mycart.getProductName());
+		mycart.setQuantity(presentQuantity + 1);
+		mycartDAO.update(mycart);
+		int productId = mycart.getProductId();
+		Product product = productDAO.get(productId);
+		int quantity = product.getQuantity() - 1;
+		product.setQuantity(quantity);
+		productDAO.saveOrUpdate(product);
+		return "redirect:/mycartlistPage";
+	}
+
+	@RequestMapping("/mycart/reduceQuantity/{productId}")
+	public String reduceQuantity(@PathVariable("productId") int cartId) {
+		String loggedInUserid = (String) session.getAttribute("loggedInUserID");
+		mycart = mycartDAO.get(cartId);
+		int presentQuantity = mycartDAO.getQuantity(loggedInUserid, mycart.getProductName());
+		if (presentQuantity == 1) {
+			session.setAttribute("isQuantityOne", "true");
+			session.setAttribute("productMessage", "Remove product by clicking the delete button");
+			return "redirect:/mycartlistPage";
+		}
+		mycart.setQuantity(presentQuantity - 1);
+		mycartDAO.update(mycart);
+		int productId = mycart.getProductId();
+		Product product = productDAO.get(productId);
+		int quantity = product.getQuantity() + 1;
+		product.setQuantity(quantity);
+		productDAO.saveOrUpdate(product);
+		return "redirect:/CartPage";
+	}*/
 	@RequestMapping("removecart")
-	public String removecart(@RequestParam("cartId") String cartId, Model model) {
+	public String removecart(@RequestParam("cartId") int cartId, Model model) {
 		
 		Mycart mycart = mycartDAO.get(cartId);
 		Product product = productDAO.get(mycart.getProductId());

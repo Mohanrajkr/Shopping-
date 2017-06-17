@@ -12,46 +12,30 @@
 
 <jsp:include page="menu.jsp"></jsp:include>
 
-<br>
-<br>
-<br>
 
 
 
-
-<br>
-
-
-
-
-<br>
-<c:if test="${ isUserClickedSignUp=='true'}">
+<c:choose>
+<c:when test="${ isUserClickedSignUp=='true'}">
 <jsp:include page="register.jsp"></jsp:include>
-</c:if>
+</c:when>
+
+<c:when test="${isUserClickedLogin=='true'}">
 <br>
-<c:if test="${isUserClickedLogin=='true'}">
+<br>
+<br>
+
 <jsp:include page="login.jsp"></jsp:include>
-</c:if>
+</c:when>
+
+<c:otherwise>
+<br>
+<br>
 <br>
 
-<c:if test="${ isUserClickedSupplier=='true'}">
-<jsp:include page="Supplier.jsp"></jsp:include>
-</c:if>
-<br>
-<c:if test="${ isUserClickedProduct=='true'}">
-<jsp:include page="Product.jsp"></jsp:include>
-</c:if>
-<br>
-<c:if test="${ isUserClickedProduct=='true'}">
-<jsp:include page="Product.jsp"></jsp:include>
-</c:if>
-<br>
-<c:if test="${ isUserClickedhomePage=='true'}">
-<jsp:include page="home.jsp"></jsp:include>
 <jsp:include page="carousel.jsp"></jsp:include>
-</c:if>
-<br>
-
- 
+<jsp:include page="productlist.jsp"></jsp:include>
+</c:otherwise>
+ </c:choose>
 </body>
 </html>

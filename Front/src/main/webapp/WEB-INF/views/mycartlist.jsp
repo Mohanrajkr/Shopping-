@@ -31,7 +31,15 @@
 
 <td>${mycart.productName}</td>
 <td>${mycart.prize}</td>
-<td>${mycart.quantity}</td> 
+<td>${mycart.quantity}
+<%-- <a href="myCart/addQuantity/${products.id}"
+							class="btn btn-info btn-sm"> <i class="fa fa-plus"></i>
+						</a> <b><c:out value="${product.quantity}" /></b> <a
+							href="myCart/reduceQuantity/${product.productId}"
+							class="btn btn-warning btn-sm"> <i class="fa fa-minus"></i>
+						</a> --%>
+
+</td> 
 <td>${mycart.date}</td>
 <td>${mycart.days}</td>
 <td>${mycart.status}</td>

@@ -228,6 +228,7 @@ img {
 						</h5>
 						<div class="action">
 							<td><a href="addtocart?productId=${product.productId}"><input style="color:green;" type="button" name="button" value="Addtocart"/></a></td></tr>
+							<h3>${message}</h3>
 						</div>
 					</div>
 				</div>

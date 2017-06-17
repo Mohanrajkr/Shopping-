@@ -54,23 +54,7 @@ input[type=text]:focus {
        <ul class="nav navbar-nav">
         <li class="active"><a href=""><br>Home</a></li></ul>
        
-         <c:if test="${isUser == 'true' }">
-        <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><br>Category<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Headphone with mic</a></li>
-            <li><a href="#">Boom Headphone</a></li>
-            <li><a href="#">Bluetooth Headphone</a></li>
-          </ul> 
-        </li>
-        </ul>
-      </c:if>
-      
-      
-      <ul class="navbar-form navbar-left">
-      <br><input type="text" name="search" placeholder="Search..">
-    </ul>
+        
     
    <c:if test="${isAdmin == 'true' }">
       <ul class="nav navbar-nav">
@@ -95,7 +79,9 @@ input[type=text]:focus {
             <li><a href="SupplierPage">AddSupplier</a></li>
           </ul>
         </li>
-      </ul>     
+      </ul> 
+        <ul class="nav navbar-nav navbar-right">
+	  <li><a href="loginPage"><br><span class="glyphicon glyphicon-logout"></span> Logout</a></li></ul>   
      </c:if>
     
    
@@ -112,15 +98,17 @@ input[type=text]:focus {
 	</c:if>
 	 <c:choose> 
 	  <c:when test="${isUserLoggedIn=='true'}">
-	  
-	 <ul class="nav navbar-nav navbar-right"> 
-    	   <li><a href="registerPage"><br><span class="glyphicon glyphicon-pencil"></span>SignUp</a></li>
-      	   <li><a href="loginPage"><br><span class="glyphicon glyphicon-user"></span>Login</a></li>
- 	 </ul>
+	  	 <ul class="nav navbar-nav navbar-right">
+	  <li><a href="loginPage"><br><span class="glyphicon glyphicon-logout"></span> Logout</a></li></ul>
+	
  	</c:when>
  	<c:otherwise>
  	<ul class="nav navbar-nav navbar-right"> 
-    		<li><a href="loginPage"><br><span class="glyphicon glyphicon-logout"></span> Logout</a></li></ul>
+    	 
+    	   <li><a href="registerPage"><br><span class="glyphicon glyphicon-pencil"></span>SignUp</a></li>
+      	   <li><a href="loginPage"><br><span class="glyphicon glyphicon-user"></span>Login</a></li>
+ 	 </ul>
+    		
 </c:otherwise>
 </c:choose>
     
