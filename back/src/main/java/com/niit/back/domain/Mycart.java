@@ -15,8 +15,9 @@ import org.springframework.stereotype.Component;
 public class Mycart {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private String cartId;
+	private int cartId;
 	
+	private String userId;
 	
 	private int productId;
 	private String productName;
@@ -49,10 +50,10 @@ public class Mycart {
 		this.status = status;
 	}
 	
-public String getCartId() {
+public int getCartId() {
 		return cartId;
 	}
-	public void setCartId(String cartId) {
+	public void setCartId(int cartId) {
 		this.cartId = cartId;
 	}
 	public int getProductId() {
@@ -98,6 +99,12 @@ public void setDays(int days) {
 public void setShippingId(int shippingId) {
 	// TODO Auto-generated method stub
 	
+}
+public String getUserId() {
+	return userId;
+}
+public void setUserId(String userId) {
+	this.userId = userId;
 }
 
 }

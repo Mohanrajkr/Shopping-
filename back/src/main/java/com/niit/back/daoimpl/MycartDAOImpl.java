@@ -52,7 +52,7 @@ public class MycartDAOImpl implements MycartDAO{
 		}
 	
 
-	public void delete(String cartId) {
+	public void delete(int cartId) {
 		Mycart mycartToDelete = new Mycart();
 		mycartToDelete.setCartId(cartId);
 		sessionFactory.getCurrentSession().delete(mycartToDelete);
@@ -132,7 +132,7 @@ public class MycartDAOImpl implements MycartDAO{
 
 	
 	@Transactional
-	public Mycart get(String cartId) {
+	public Mycart get(int cartId) {
 		
 		//get method get the date from user table based on primary key i.e., id
 		// and set it to User class
@@ -160,6 +160,15 @@ public class MycartDAOImpl implements MycartDAO{
 	
 	}
 
+	@Transactional
+	public Integer getQuantity(String userId, String productName) {
+		String hql = "select quantity from  Mycart where userId = ?  and  productName =?";
 
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setString(0, userId);
+		query.setString(1, productName);
+
+		return (Integer) query.uniqueResult();
+	}
 	
 }

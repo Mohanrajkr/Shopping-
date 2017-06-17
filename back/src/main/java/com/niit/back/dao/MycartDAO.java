@@ -19,7 +19,7 @@ public interface MycartDAO {
 	public List<Mycart> getEmail(String email);
 public boolean validate(String email, String password);
 	
-	public void delete(String cartId);
+	public void delete(int cartId);
 
 	public boolean save(Mycart mycart);
 	public boolean update(Mycart mycart);
@@ -35,11 +35,11 @@ public boolean validate(String email, String password);
 	public boolean itemAlreadyExist(String email, int productId);
 
 
-	public Mycart get(String cartId);
+	public Mycart get(int cartId);
 
 
 	public void updateshipping(String email, int shippingId);
 
-	
+	public Integer getQuantity(String userId, String productName);
 	
 }
