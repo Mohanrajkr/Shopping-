@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import com.niit.back.dao.MycartDAO;
 import com.niit.back.domain.Mycart;
-import com.niit.back.domain.Product;
+
 
 @Repository("MycartDAO")
 @Transactional
@@ -154,18 +154,18 @@ public class MycartDAOImpl implements MycartDAO{
 
 
 	@Transactional
-	public void updateshipping(String emailId, int shippingId) {
-		String hql = " update Cart set shippingId = '" + shippingId + "' where emailId = '" + emailId + "'";
+	public void updateshipping(String email, int shippingId) {
+		String hql = " update Mycart set shippingId = '" + shippingId + "' where email = '" + email + "'";
 		sessionFactory.getCurrentSession().createQuery(hql);
 	
 	}
 
 	@Transactional
-	public Integer getQuantity(String userId, String productName) {
+	public Integer getQuantity(int userId, String productName) {
 		String hql = "select quantity from  Mycart where userId = ?  and  productName =?";
 
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
-		query.setString(0, userId);
+		query.setLong(0, userId);
 		query.setString(1, productName);
 
 		return (Integer) query.uniqueResult();
