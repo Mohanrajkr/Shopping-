@@ -221,11 +221,11 @@ img {
 							 <input value="${product.quantity}" />
 							
 						</h5>
-						<h5 class="colors">colors:
+						<!-- <h5 class="colors">colors:
 							<span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
 							<span class="color green"></span>
 							<span class="color blue"></span>
-						</h5>
+						</h5> -->
 						<div class="action">
 							<td><a href="addtocart?productId=${product.productId}"><input style="color:green;" type="button" name="button" value="Addtocart"/></a></td></tr>
 							<h3>${message}</h3>

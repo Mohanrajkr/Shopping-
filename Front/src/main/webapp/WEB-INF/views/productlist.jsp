@@ -103,7 +103,7 @@ $(document).ready(function() {
                     <h4 class="group inner list-group-item-heading">
                         ${product.productName}</h4>
                     <p class="group inner list-group-item-text">
-                        description..</p>
+                        ${product.description}..</p>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <p class="lead">
