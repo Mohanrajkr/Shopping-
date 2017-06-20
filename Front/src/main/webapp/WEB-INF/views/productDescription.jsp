@@ -3,6 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -226,11 +228,24 @@ img {
 							<span class="color green"></span>
 							<span class="color blue"></span>
 						</h5> -->
+						<c:if test="${pageContext.request.userPrincipal.name == null }">
+						<p><a href="loginPage"=${product.productId}">
 						<div class="action">
-							<td><a href="addtocart?productId=${product.productId}"><input style="color:green;" type="button" name="button" value="Addtocart"/></a></td></tr>
+							<td><input style="color:green;" type="button" name="button" value="Addtocart"/></td>
 							<h3>${message}</h3>
-						</div>
+					
+					</div></a></c:if>
+						
+						<c:if test="${pageContext.request.userPrincipal.name != null }">
+						<p><a href="addtocart?productId=${product.productId}">
+						<div class="action">
+							<td><input style="color:green;" type="button" name="button" value="Addtocart"/></td>
+							<h3>${message}</h3>
+					</div></a>
+					</c:if>
+					</c>
 					</div>
+				
 				</div>
 			</div>
 		</div>

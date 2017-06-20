@@ -27,7 +27,9 @@
 
 <jsp:include page="login.jsp"></jsp:include>
 </c:when>
-
+<c:when test="${ isUserClickedOrderHistory=='true'}">
+<jsp:include page="orderhistory.jsp"></jsp:include>
+</c:when>
 <c:otherwise>
 <br>
 <br>

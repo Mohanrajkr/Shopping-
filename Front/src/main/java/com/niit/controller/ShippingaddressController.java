@@ -28,6 +28,8 @@ public class ShippingaddressController {
 	
 	@Autowired
 	private MycartDAO mycartDAO;
+	@Autowired
+	private Mycart mycart;
 	
 	@RequestMapping("shippingaddressPage")
 	public ModelAndView newShippingaddress(){
@@ -98,7 +100,14 @@ public class ShippingaddressController {
 	}
 	
 	@RequestMapping("thankyouPage")
-	public String thankyouPage( Model model){
+	public String thankyouPage( Principal p,Model model){
+		String email = p.getName();
+		User user = userDAO.get(email);
+		for(Mycart mycart : mycartDAO.listCartByStatus(email, "N")){
+			mycart.setStatus("P");
+			mycart.setProductName(mycart.getProductName()+" ");
+			mycartDAO.update(mycart);
+		}
 		model.addAttribute("CheckoutClicked", true);
 		return "userlogin";
 	}

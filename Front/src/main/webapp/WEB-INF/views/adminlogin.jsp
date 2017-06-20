@@ -11,6 +11,10 @@
 <body>
 <jsp:include page="menu.jsp"></jsp:include>
 
+<br>
+<br>
+<h2>Welcome admin</h2>
+
 
 <c:choose>
 <c:when test="${isAdminClickedAddCategory== 'true'}">

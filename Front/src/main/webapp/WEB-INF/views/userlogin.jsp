@@ -10,6 +10,9 @@
 </head>
 <body>
 <jsp:include page="menu.jsp"></jsp:include>
+<br>
+<br>
+<br>
 <h2>Welcome user</h2>
 
 
