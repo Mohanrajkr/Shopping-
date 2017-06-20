@@ -118,36 +118,7 @@ public class CartController {
 
 	}
 
-	/*
-	 * @RequestMapping("/mycart/addQuantity/{productId}") public String
-	 * updateQuantity(@PathVariable("productId") int cartId, Principal p) {
-	 * 
-	 * User user = userDAO.get(p.getName());
-	 * 
-	 * mycart = mycartDAO.get(cartId); int presentQuantity =
-	 * mycartDAO.getQuantity(user.getUserId(), mycart.getProductName());
-	 * mycart.setQuantity(presentQuantity + 1); mycartDAO.update(mycart); int
-	 * productId = mycart.getProductId(); Product pct =
-	 * productDAO.get(productId); int qty = pct.getQuantity() - 1;
-	 * pct.setQuantity(qty); productDAO.saveOrUpdate(pct); return
-	 * "redirect:/mycartlistPage"; }
-	 */
-
-	/*
-	 * @RequestMapping("/mycart/reduceQuantity/{productId}") public String
-	 * reduceQuantity(@PathVariable("productId") int cartId) { //int
-	 * loggedInUserid = (int) session.getAttribute("loggedInUserID"); mycart =
-	 * mycartDAO.get(cartId); int presentQuantity =
-	 * mycartDAO.getQuantity(loggedInUserid, mycart.getProductName()); if
-	 * (presentQuantity == 1) { session.setAttribute("isQuantityOne", "true");
-	 * session.setAttribute("productMessage",
-	 * "Remove product by clicking the delete button"); return
-	 * "redirect:/mycartlistPage"; } mycart.setQuantity(presentQuantity - 1);
-	 * mycartDAO.update(mycart); int productId = mycart.getProductId(); Product
-	 * product = productDAO.get(productId); int qty = product.getQuantity() + 1;
-	 * product.setQuantity(qty); productDAO.saveOrUpdate(product); return
-	 * "redirect:/mycartlistPage"; }
-	 */
+	
 	@RequestMapping("removecart")
 	public String removecart(@RequestParam("cartId") int cartId, Model model) {
 
