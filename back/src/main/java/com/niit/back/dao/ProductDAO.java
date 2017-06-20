@@ -24,7 +24,7 @@ public interface ProductDAO {
 		public void delete(int productId);
 
 		public Product get(int productId);
-
+		public Product get(String productName);
 		public boolean saveOrUpdate(Product product);
 		
 	}

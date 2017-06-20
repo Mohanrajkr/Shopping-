@@ -26,14 +26,16 @@ public interface MycartDAO {
 
 	public Long getTotal(String cartId);
 
-	public Mycart getByUserandProduct(String email, int productId);
+	public Mycart getByUserandProduct(String email, String productName);
 
-	public boolean itemAlreadyExist(String email, int productId);
+	public Mycart itemAlreadyExist(String email, String productName);
 
 	public Mycart get(int cartId);
 
 	public void updateshipping(String email, int shippingId);
 
 	public Integer getQuantity(int userId, String productName);
+	
+	public List<Mycart> listCartByStatus(String userId, String status);
 
 }

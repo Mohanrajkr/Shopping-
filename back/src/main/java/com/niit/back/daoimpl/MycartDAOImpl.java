@@ -106,20 +106,17 @@ public class MycartDAOImpl implements MycartDAO{
 	}
 
 
-	public boolean itemAlreadyExist(String email, int productId) {
-		String hql = "from Mycart where email= '" + email + "' and " + " productId ='" + productId+"'";
-		org.hibernate.Query query = sessionFactory.getCurrentSession().createQuery(hql);
-		@SuppressWarnings("unchecked")
-		List<Mycart> list = (List<Mycart>) query.list();
-		if (list != null && !list.isEmpty()) {
-			return true;
-		}
-		return false;
+	public Mycart itemAlreadyExist(String email, String productName) {
+		String hql = "from Mycart where email = ? and productName = ?";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setString(0, email);
+		query.setString(1, productName);
+		return (Mycart) query.uniqueResult();
 	}
 
 
-	public Mycart getByUserandProduct(String email, int productId) {
-		String hql = "from Mycart where email= '" + email + "' and " + " productId ='" + productId+"'";
+	public Mycart getByUserandProduct(String email, String productName) {
+		String hql = "from Mycart where email= '" + email + "' and " + " productName ='" + productName+"'";
 		org.hibernate.Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
 		List<Mycart> listMycart = (List<Mycart>) query.list();
@@ -171,4 +168,13 @@ public class MycartDAOImpl implements MycartDAO{
 		return (Integer) query.uniqueResult();
 	}
 	
+	@Transactional
+	public List<Mycart> listCartByStatus(String userId, String status) {
+
+		return sessionFactory.getCurrentSession()
+				.createQuery("from Mycart where userId=" + "'" + userId + "' " + "  and status = " + "'" + status + "'")
+				.list();
+
+	}
+
 }

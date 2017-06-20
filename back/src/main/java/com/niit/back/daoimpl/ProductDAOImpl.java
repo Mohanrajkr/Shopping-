@@ -74,6 +74,16 @@ public List<Product> list() {
 	  return 	(Product)  sessionFactory.getCurrentSession().get(Product.class, productId);
 		
 	}
+	
+	@Transactional
+	public Product get(String productName) {
+		
+		//get method get the date from user table based on primary key i.e., id
+		// and set it to User class
+		//like select * from user where id = ?
+	  return 	(Product)  sessionFactory.getCurrentSession().get(Product.class, productName);
+		
+	}
 	@Transactional
 	public void delete(int productId) {
 	Product productToDelete = new Product();
