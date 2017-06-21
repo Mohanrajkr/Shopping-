@@ -28,15 +28,15 @@
 
   <form action="newProduct" method="post" onsubmit="return productvalidate()" enctype="multipart/form-data">
   <div class="form-group">
-      <label for="name">productName</label>
+      <label for="name">ProductName</label>
       <input type="name" class="form-control" name="productName" id="productname" placeholder="Enter productName">
     </div>
     <div class="form-group">
-      <label for="number">prize</label>
+      <label for="number">Prize</label>
       <input type="name" class="form-control" name="prize" id="prize" placeholder="Enter prize">
     </div>
     <div class="form-group">
-      <label for="mobile number">quantity</label>
+      <label for="mobile number">Quantity</label>
       <input type="mobile number" class="form-control" name="quantity" id="quantity" placeholder="Enter quantity">
     </div>
    <div class="form-group">
@@ -60,7 +60,7 @@
 </select>
      </div>
      <div class="form-group">
-      <label for="description">description</label>
+      <label for="description">Description</label>
       <input type="description" class="form-control" name="description" id="description" placeholder="Enter description">
     </div>
     <div class="form-group">

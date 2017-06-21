@@ -16,11 +16,11 @@
 <div class="container">
   <form action="newCategory" method="post" onsubmit="return categoryvalidate()">
   <div class="form-group">
-      <label for="name">categoryName</label>
+      <label for="name">CategoryName</label>
       <input type="name" class="form-control" name="categoryName" id="categoryname" placeholder="Enter categoryName">
     </div>
     <div class="form-group">
-      <label for="description">description</label>
+      <label for="description">Description</label>
       <input type="name" class="form-control" name="description" id="description" placeholder="Enter description">
     </div>
     <button type="submit" class="btn btn-default" name="">Submit</button>

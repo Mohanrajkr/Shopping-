@@ -69,42 +69,6 @@ public String OrderHistoryPage(Principal p,Model model) {
 
 	return "home";
 }
-@RequestMapping("/kitchenPage")
-public String kitchen(Model model)
-{
-	model.addAttribute("isUserClickedKitchen&Dining", "true");
-
-	return "kitchen";
-}
-@RequestMapping("/servingPage")
-public String serving(Model model)
-{
-	model.addAttribute("isUserClickedDining&Serving", "true");
-
-	return "serving";
-}
-@RequestMapping("/furniturePage")
-public String furniture(Model model)
-{
-	model.addAttribute("isUserClickedFurniture", "true");
-
-	return "furniture";
-}
-@RequestMapping("/furnisingPage")
-public String furnisingPage(Model model)
-{
-	model.addAttribute("isUserClickedFurnising", "true");
-
-	return "furnising";
-}
-@RequestMapping("/automationPage")
-public String automationPage(Model model)
-{
-	model.addAttribute("isUserClickedSmart Home Automation", "true");
-
-	return "automation";
-}
-
 
 @RequestMapping("/ShippingAddressPage")
 public String ShippingAddressPage(Model model)

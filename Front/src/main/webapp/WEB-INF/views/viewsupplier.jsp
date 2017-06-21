@@ -25,10 +25,12 @@
    <thead>
       <tr>
       <th>S.No</th>
-       <th>supplierId</th>
-         <th>supplierName</th>
-         <th>address</th>
-         <th>mobileNumber</th>
+       <th>SupplierId</th>
+         <th>SupplierName</th>
+         <th>Address</th>
+         <th>MobileNumber</th>
+          <th>Edit</th>
+           <th>Delete</th>
       </tr>
    </thead>
    

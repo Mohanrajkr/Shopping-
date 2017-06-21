@@ -100,16 +100,6 @@ String message;
 	}
 
 	
-	/*@RequestMapping("/secure_logout")
-	public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) {
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		if (auth != null) {
-			new SecurityContextLogoutHandler().logout(request, response, auth);
-		}
-		SecurityContextHolder.getContext().setAuthentication(null);
-		ModelAndView mv = new ModelAndView("redirect:/homePage");
-		return mv;
-	}
-*/
+	
 
 }

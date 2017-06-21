@@ -30,7 +30,6 @@
 
 <tr>
 <td>${status.count}</td>
-
 <td>${mycart.productName}</td>
 <td>${mycart.prize}</td>
 <td>${mycart.productId}</td> 

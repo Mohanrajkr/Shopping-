@@ -16,15 +16,15 @@
 <div class="container">
   <form action="newSupplier" method="post" onsubmit="return suppliervalidate()">
   <div class="form-group">
-         <label for="name">supplierName</label>
+         <label for="name">SupplierName</label>
       <input type="name" class="form-control" name="supplierName" id="suppliername" placeholder="Enter supplierName">
     </div>
     <div class="form-group">
-      <label for="address">address</label>
+      <label for="address">Address</label>
       <input type="name" class="form-control" name="address" id="address" placeholder="Enter address">
     </div>
     <div class="form-group">
-      <label for="mobile number">mobileNumber</label>
+      <label for="mobile number">MobileNumber</label>
       <input type="mobile number" class="form-control" name="mobileNumber" id="mobilenumber" placeholder="Enter mobileNumber">
     </div>
     <button type="submit" class="btn btn-default" name="">Submit</button>

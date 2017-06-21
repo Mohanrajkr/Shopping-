@@ -25,14 +25,15 @@
    <thead>
       <tr>
        <th>S.No</th>
-      <th>productId</th>
-         <th>productName</th>
-         <th>prize</th>
-         <th>quantity</th>
-         <th>categoryName</th>
-         <th>supplierName</th>
-         <th>description</th>
-         
+      <th>ProductId</th>
+         <th>ProductName</th>
+         <th>Prize</th>
+         <th>Quantity</th>
+         <th>CategoryName</th>
+         <th>SupplierName</th>
+         <th>Description</th>
+          <th>Edit</th>
+           <th>Delete</th>
       </tr>
    </thead>
    

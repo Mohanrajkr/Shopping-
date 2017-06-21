@@ -15,15 +15,15 @@
 <div class="container">
   <form action="afterEditCategory" method="post">
   <div class="form-group">
-      <label for="id">categoryId</label>
+      <label for="id">CategoryId</label>
       <input type="text" class="form-control" name="categoryId" id="categoryid" value="${category.categoryId }" readonly="true">
     </div>
   <div class="form-group">
-      <label for="name">categoryName</label>
+      <label for="name">CategoryName</label>
       <input type="text" class="form-control" name="categoryName" id="categoryname" value="${category.categoryName }">
     </div>
     <div class="form-group">
-      <label for="description">description</label>
+      <label for="description">Description</label>
       <input type="text" class="form-control" name="description" id="description" value="${category.description }">
     </div>
     <button type="submit" class="btn btn-default" name="">Submit</button>

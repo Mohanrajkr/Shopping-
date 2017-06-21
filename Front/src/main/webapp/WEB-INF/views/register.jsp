@@ -15,28 +15,28 @@
 <div class="container">
   <form action="newUser" method="post" onsubmit="return validate()">
   <div class="form-group">
-  <label for="name" >userName</label>
+  <label for="name" >UserName</label>
       <input type="name" class="form-control" name="userName" id="username"  placeholder="Enter username">
     </div>
     <div class="form-group">
      
     <div class="form-group">
-      <label for="email">email</label>
+      <label for="email">Email</label>
       <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label for="password">password</label>
+      <label for="password">Password</label>
       <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
     </div>
-    <label for="mobile number">mobileNumber</label>
+    <label for="mobile number">MobileNumber</label>
     <input type="mobile number" class="form-control" name="mobileNumber" id="mobilenumber" placeholder="Enter moblie number">
   </div>
   <div class="form-group">
-  <label for="address"> address</label>
+  <label for="address"> Address</label>
   <input type="address" class="form-control" name="address" id="address" placeholder="Enter address">
 </div>
 <div class="form-group">
-<label for="zipcode">zipcode</label>
+<label for="zipcode">Zipcode</label>
 <input type="zipcode" class="form-control" name="zipcode" id="zipcode" placeholder="Enter zipcode">
 </div>
     

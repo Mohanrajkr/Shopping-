@@ -15,14 +15,37 @@ http://www.springframework.org/schema/webflow-config
 <!-- http://locahost:8268/Front/intercept_url -->
 
 <!--  intercept url starting-->
-		<!-- <security:intercept-url pattern="/manage**"
+		<security:intercept-url pattern="/viewcategoryPage"
 			access="hasRole('ROLE_ADMIN')" />
 
-    	<security:intercept-url pattern="/myCart/**"
+<security:intercept-url pattern="/viewproductPage"
+			access="hasRole('ROLE_ADMIN')" />
+			
+			<security:intercept-url pattern="/viewsupplierPage"
+			access="hasRole('ROLE_ADMIN')" />
+			
+			<security:intercept-url pattern="/CategoryPage"
+			access="hasRole('ROLE_ADMIN')" />
+			
+			<security:intercept-url pattern="/ProductPage"
+			access="hasRole('ROLE_ADMIN')" />
+			
+			<security:intercept-url pattern="/SupplierPage"
+			access="hasRole('ROLE_ADMIN')" />
+			
+			<security:intercept-url pattern="/editSupplier"
+			access="hasRole('ROLE_ADMIN')" />
+			
+			<security:intercept-url pattern="/editProduct"
+			access="hasRole('ROLE_ADMIN')" />
+			
+			<security:intercept-url pattern="/editCategory"
+			access="hasRole('ROLE_ADMIN')" />
+			
+    	<security:intercept-url pattern="/mycartlistpage**"
 			access="hasRole('ROLE_USER')" />
 
-		<security:intercept-url pattern="/cart_checkout**"
-			access="hasRole('ROLE_USER')" /> -->
+		 
 <!--  intercept url Ending-->	
 			
 	

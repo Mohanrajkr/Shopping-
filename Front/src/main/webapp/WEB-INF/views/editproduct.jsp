@@ -15,23 +15,23 @@
 <div class="container">
   <form action="afterEditProduct" method="post" >
   <div class="form-group">
-      <label for="id">productId</label>
+      <label for="id">ProductId</label>
       <input type="text" class="form-control" name="productId" id="productid" value="${product.productId }" readonly="true">
     </div>
   <div class="form-group">
-      <label for="name">productName</label>
+      <label for="name">ProductName</label>
       <input type="text" class="form-control" name="productName" id="productname" value="${product.productName }" >
     </div>
     <div class="form-group">
-      <label for="number">prize</label>
+      <label for="number">Prize</label>
       <input type="text" class="form-control" name="prize" id="prize" value="${product.prize }" >
     </div>
     <div class="form-group">
-      <label for="mobile number">quantity</label>
+      <label for="mobile number">Quantity</label>
       <input type="text" class="form-control" name="quantity" id="quantity" value="${product.quantity }">
     </div>
      <div class="form-group">
-      <label for="description">description</label>
+      <label for="description">Description</label>
       <input type="text" class="form-control" name="description" id="description" value="${product.description }" >
     </div>
     

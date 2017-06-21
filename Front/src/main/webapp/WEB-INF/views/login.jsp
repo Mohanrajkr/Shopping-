@@ -15,11 +15,11 @@
 <div class="container">
   <form action="signIn" method="post">
 <div class="form-group">
-      <label for="email">email</label>
+      <label for="email">Email</label>
       <input type="email" class="form-control" name="email"id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label for="password">password</label>
+      <label for="password">Password</label>
       <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
     </div>
    

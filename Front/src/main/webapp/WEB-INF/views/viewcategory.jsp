@@ -25,9 +25,11 @@
    <thead>
       <tr>
       <th>S.No</th>
-       <th>categoryId</th>
-         <th>categoryName</th>
+       <th>CategoryId</th>
+         <th>CategoryName</th>
          <th>Description</th>
+          <th>Edit</th>
+           <th>Delete</th>
       </tr>
    </thead>
    

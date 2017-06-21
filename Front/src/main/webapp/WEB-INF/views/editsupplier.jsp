@@ -15,19 +15,19 @@
 <div class="container">
   <form action="afterEditSupplier" method="post" >
   <div class="form-group">
-         <label for="id">supplierId</label>
+         <label for="id">SupplierId</label>
       <input type="id" class="form-control" name="supplierId" id="supplierid" value="${supplier.supplierId }" readonly="true">
     </div>
   <div class="form-group">
-         <label for="name">supplierName</label>
+         <label for="name">SupplierName</label>
       <input type="name" class="form-control" name="supplierName" id="suppliername" value="${supplier.supplierName }" >
     </div>
     <div class="form-group">
-      <label for="address">address</label>
+      <label for="address">Address</label>
       <input type="name" class="form-control" name="address" id="address" value="${supplier.address }" >
     </div>
     <div class="form-group">
-      <label for="mobile number">mobileNumber</label>
+      <label for="mobile number">MobileNumber</label>
       <input type="mobile number" class="form-control" name="mobileNumber" id="mobilenumber" value="${supplier.mobileNumber }" >
     </div>
     <button type="submit" class="btn btn-default" name="">Submit</button>
